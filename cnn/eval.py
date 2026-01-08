@@ -88,11 +88,12 @@ for label in range(10):
 
 # %% Plot
 confusion = sklearn.metrics.confusion_matrix(y_test, pred_test)
+norm_confusion = confusion / confusion.sum(axis=1, keepdims=True) * 100
 log_confusion = np.log1p(confusion)
 sns.heatmap(
     log_confusion,
-    annot=confusion,
-    fmt="d",
+    annot=norm_confusion,
+    cmap="viridis",
     cbar=False,
     square=True,
     xticklabels=class_names,

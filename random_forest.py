@@ -5,12 +5,13 @@ import sklearn.metrics
 import torch
 import torchvision
 from sklearn.ensemble import RandomForestClassifier
+from matplotlib import pyplot as plt
 
 
 # %%
 def load_dataset(train: bool):
     dataset_train = torchvision.datasets.FashionMNIST(
-        "./dataset",
+        "./data",
         train=train,
         download=True,
         transform=torchvision.transforms.ToTensor(),
@@ -37,35 +38,67 @@ clf = RandomForestClassifier(n_estimators=100, criterion="entropy", max_depth=10
 # %%
 clf.fit(X_train, y_train)
 # %%
-pred = clf.predict(X_test)
+pred_test = clf.predict(X_test)
 print("Train accuracy:", clf.score(X_train, y_train))
 
 print("Test accuracy:", clf.score(X_test, y_test))
 
 print(
-    "Test precision:", sklearn.metrics.precision_score(y_test, pred, average="weighted")
+    "Test precision:\t{:.4f}".format(
+        sklearn.metrics.precision_score(y_test, pred_test, average="weighted")
+    ),
 )
-print("Test recall:", sklearn.metrics.recall_score(y_test, pred, average="weighted"))
+print(
+    "Test recall:\t{:.4f}".format(
+        sklearn.metrics.recall_score(y_test, pred_test, average="weighted")
+    )
+)
+
+
+class_names = [
+    "T-shirt/top",
+    "Trouser",
+    "Pullover",
+    "Dress",
+    "Coat",
+    "Sandal",
+    "Shirt",
+    "Sneaker",
+    "Bag",
+    "Ankle boot",
+]
 
 for label in range(10):
+    print(f"Label: {class_names[label]}")
     print(
-        "Test precision for label {}: {}".format(
-            label,
+        "Precision:\t{:.4f}".format(
             sklearn.metrics.precision_score(
-                y_test, pred, average="weighted", labels=[label]
+                y_test, pred_test, average="weighted", labels=[label]
             ),
         )
     )
     print(
-        "Test recall for label {}: {}".format(
-            label,
+        "Recall:\t\t{:.4f}".format(
             sklearn.metrics.recall_score(
-                y_test, pred, average="weighted", labels=[label]
+                y_test, pred_test, average="weighted", labels=[label]
             ),
         )
     )
 
-# %%
-sns.heatmap(sklearn.metrics.confusion_matrix(y_test, pred))
-
+# %% Plot
+confusion = sklearn.metrics.confusion_matrix(y_test, pred_test)
+norm_confusion = confusion / confusion.sum(axis=1, keepdims=True) * 100
+log_confusion = np.log1p(confusion)
+sns.heatmap(
+    log_confusion,
+    annot=norm_confusion,
+    cmap="viridis",
+    cbar=False,
+    square=True,
+    xticklabels=class_names,
+    yticklabels=class_names,
+)
+plt.xticks(rotation=45, ha="right")
+plt.xlabel("Predicted Label")
+plt.ylabel("True Label")
 # %%
