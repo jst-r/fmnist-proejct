@@ -1,0 +1,54 @@
+============================================================
+FASHION-MNIST RANDOM FOREST CLASSIFIER
+============================================================
+
+[DATA LOADING]
+Loading train dataset...
+Loading test dataset...
+Data loading complete: 60000 train, 10000 test samples
+
+[MODEL TRAINING]
+Random Forest initialized: n_estimators=100, max_depth=100, criterion=entropy
+Training completed in 11.89 seconds
+
+[MODEL EVALUATION]
+Evaluation completed in 0.86 seconds
+
+============================================================
+RESULTS
+============================================================
+Train accuracy:  1.0000
+Test accuracy:   0.8754
+Test precision:  0.8744
+Test recall:     0.8754
+============================================================
+Label: T-shirt/top
+Precision:	0.8149
+Recall:		0.8540
+Label: Trouser
+Precision:	0.9948
+Recall:		0.9630
+Label: Pullover
+Precision:	0.7600
+Recall:		0.8010
+Label: Dress
+Precision:	0.8772
+Recall:		0.9070
+Label: Coat
+Precision:	0.7636
+Recall:		0.8170
+Label: Sandal
+Precision:	0.9815
+Recall:		0.9570
+Label: Shirt
+Precision:	0.7193
+Recall:		0.5790
+Label: Sneaker
+Precision:	0.9237
+Recall:		0.9560
+Label: Bag
+Precision:	0.9577
+Recall:		0.9740
+Label: Ankle boot
+Precision:	0.9517
+Recall:		0.9460

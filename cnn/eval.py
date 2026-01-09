@@ -1,4 +1,5 @@
 # %%
+import time
 import numpy as np
 import seaborn as sns
 from matplotlib import pyplot as plt
@@ -6,6 +7,13 @@ import sklearn.metrics
 import torch
 
 from shared import get_loaders, make_model, device
+
+
+print("=" * 60)
+print("FASHION-MNIST CNN EVALUATION")
+print("=" * 60)
+
+total_start = time.time()
 
 # %%
 class_names = [
@@ -20,16 +28,22 @@ class_names = [
     "Bag",
     "Ankle boot",
 ]
-# %% Load weights
+
+print("\n[MODEL LOADING]")
+load_start = time.time()
 model, save_path = make_model()
 model.to(device)
-# Ensure the path matches your saved file
 model.load_state_dict(torch.load(save_path, map_location=device))
 model.eval()
+print(f"[{time.time() - total_start:.2f}s] Model loaded from {save_path}")
+
+# %%
+print("\n[PREDICTION]")
+pred_start = time.time()
 
 
-# %% Dataloader (Keep images as tensors for the CNN)
 def get_predictions(train: bool):
+    pred_start = time.time()
     train_loader, test_loader = get_loaders(batch_size=512, use_workers=False)
     loader = train_loader if train else test_loader
 
@@ -45,29 +59,27 @@ def get_predictions(train: bool):
             all_preds.append(preds.cpu().numpy())
             all_labels.append(labels.numpy())
 
+    elapsed = time.time() - pred_start
+    print(
+        f"[{time.time() - total_start:.2f}s] Generated predictions for {'train' if train else 'test'} set in {elapsed:.2f}s"
+    )
     return np.concatenate(all_preds), np.concatenate(all_labels)
 
 
-# %% Get Results
 pred_train, y_train = get_predictions(train=True)
 pred_test, y_test = get_predictions(train=False)
 
-# %% Metrics (Same as your RF script)
+print("\n[RESULTS]")
+print("=" * 60)
+print(f"Train accuracy:  {sklearn.metrics.accuracy_score(y_train, pred_train):.4f}")
+print(f"Test accuracy:   {sklearn.metrics.accuracy_score(y_test, pred_test):.4f}")
 print(
-    "Train accuracy:\t{:.4f}".format(sklearn.metrics.accuracy_score(y_train, pred_train))
-)
-print("Test accuracy:\t{:.4f}".format(sklearn.metrics.accuracy_score(y_test, pred_test)))
-
-print(
-    "Test precision:\t{:.4f}".format(
-        sklearn.metrics.precision_score(y_test, pred_test, average="weighted")
-    ),
+    f"Test precision:  {sklearn.metrics.precision_score(y_test, pred_test, average='weighted'):.4f}"
 )
 print(
-    "Test recall:\t{:.4f}".format(
-        sklearn.metrics.recall_score(y_test, pred_test, average="weighted")
-    )
+    f"Test recall:     {sklearn.metrics.recall_score(y_test, pred_test, average='weighted'):.4f}"
 )
+print("=" * 60)
 
 for label in range(10):
     print(f"Label: {class_names[label]}")

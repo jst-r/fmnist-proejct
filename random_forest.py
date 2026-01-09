@@ -1,4 +1,5 @@
 # %%
+import time
 import numpy as np
 import seaborn as sns
 import sklearn.metrics
@@ -10,6 +11,7 @@ from matplotlib import pyplot as plt
 
 # %%
 def load_dataset(train: bool):
+    print(f"Loading {'train' if train else 'test'} dataset...")
     dataset_train = torchvision.datasets.FashionMNIST(
         "./data",
         train=train,
@@ -30,29 +32,48 @@ def load_dataset(train: bool):
     return X, y
 
 
+print("=" * 60)
+print("FASHION-MNIST RANDOM FOREST CLASSIFIER")
+print("=" * 60)
+
+
+print("\n[DATA LOADING]")
 X_train, y_train = load_dataset(train=True)
 X_test, y_test = load_dataset(train=False)
-# %%
-clf = RandomForestClassifier(n_estimators=100, criterion="entropy", max_depth=100)
+print(
+    f"Data loading complete: {X_train.shape[0]} train, {X_test.shape[0]} test samples"
+)
 
-# %%
+print("\n[MODEL TRAINING]")
+clf = RandomForestClassifier(
+    n_estimators=100, criterion="entropy", max_depth=100, n_jobs=-1
+)
+print("Random Forest initialized: n_estimators=100, max_depth=100, criterion=entropy")
+
+train_start = time.time()
 clf.fit(X_train, y_train)
-# %%
+train_time = time.time() - train_start
+print(f"Training completed in {train_time:.2f} seconds")
+
+print("\n[MODEL EVALUATION]")
+eval_start = time.time()
+pred_train = clf.predict(X_train)
 pred_test = clf.predict(X_test)
-print("Train accuracy:", clf.score(X_train, y_train))
+eval_time = time.time() - eval_start
+print(f"Evaluation completed in {eval_time:.2f} seconds")
 
-print("Test accuracy:", clf.score(X_test, y_test))
-
+print("\n" + "=" * 60)
+print("RESULTS")
+print("=" * 60)
+print(f"Train accuracy:  {clf.score(X_train, y_train):.4f}")
+print(f"Test accuracy:   {clf.score(X_test, y_test):.4f}")
 print(
-    "Test precision:\t{:.4f}".format(
-        sklearn.metrics.precision_score(y_test, pred_test, average="weighted")
-    ),
+    f"Test precision:  {sklearn.metrics.precision_score(y_test, pred_test, average='weighted'):.4f}"
 )
 print(
-    "Test recall:\t{:.4f}".format(
-        sklearn.metrics.recall_score(y_test, pred_test, average="weighted")
-    )
+    f"Test recall:     {sklearn.metrics.recall_score(y_test, pred_test, average='weighted'):.4f}"
 )
+print("=" * 60)
 
 
 class_names = [
