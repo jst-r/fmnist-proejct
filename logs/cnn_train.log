@@ -1,0 +1,27 @@
+Epoch 01: train_loss=0.4591 train_acc=0.8349 test_loss=0.3131 test_acc=0.8877 time=8.91
+Epoch 02: train_loss=0.2937 train_acc=0.8930 test_loss=0.2757 test_acc=0.8992 time=8.69
+Epoch 03: train_loss=0.2416 train_acc=0.9114 test_loss=0.2385 test_acc=0.9135 time=8.99
+Epoch 04: train_loss=0.2092 train_acc=0.9223 test_loss=0.2336 test_acc=0.9129 time=9.17
+Epoch 05: train_loss=0.1832 train_acc=0.9319 test_loss=0.2292 test_acc=0.9195 time=9.06
+Epoch 06: train_loss=0.1644 train_acc=0.9396 test_loss=0.2102 test_acc=0.9273 time=9.27
+Epoch 07: train_loss=0.1390 train_acc=0.9486 test_loss=0.2145 test_acc=0.9229 time=9.26
+Epoch 08: train_loss=0.1277 train_acc=0.9518 test_loss=0.2128 test_acc=0.9256 time=9.21
+Epoch 09: train_loss=0.1131 train_acc=0.9580 test_loss=0.2200 test_acc=0.9319 time=9.11
+Epoch 10: train_loss=0.1005 train_acc=0.9624 test_loss=0.2340 test_acc=0.9282 time=9.13
+Epoch 11: train_loss=0.0899 train_acc=0.9655 test_loss=0.2282 test_acc=0.9286 time=8.99
+Epoch 12: train_loss=0.0814 train_acc=0.9692 test_loss=0.2403 test_acc=0.9330 time=8.97
+Epoch 13: train_loss=0.0726 train_acc=0.9729 test_loss=0.2485 test_acc=0.9320 time=9.00
+Epoch 14: train_loss=0.0662 train_acc=0.9751 test_loss=0.2521 test_acc=0.9292 time=9.10
+Epoch 15: train_loss=0.0586 train_acc=0.9778 test_loss=0.2725 test_acc=0.9317 time=8.90
+Epoch 16: train_loss=0.0529 train_acc=0.9800 test_loss=0.2676 test_acc=0.9347 time=8.99
+Epoch 17: train_loss=0.0503 train_acc=0.9814 test_loss=0.2758 test_acc=0.9325 time=8.98
+Epoch 18: train_loss=0.0486 train_acc=0.9818 test_loss=0.2853 test_acc=0.9307 time=9.01
+Epoch 19: train_loss=0.0429 train_acc=0.9844 test_loss=0.2901 test_acc=0.9319 time=9.00
+Epoch 20: train_loss=0.0393 train_acc=0.9849 test_loss=0.3015 test_acc=0.9332 time=8.98
+Epoch 21: train_loss=0.0388 train_acc=0.9855 test_loss=0.2914 test_acc=0.9331 time=8.99
+Epoch 22: train_loss=0.0381 train_acc=0.9866 test_loss=0.3140 test_acc=0.9296 time=9.12
+Epoch 23: train_loss=0.0331 train_acc=0.9879 test_loss=0.3246 test_acc=0.9324 time=8.91
+Epoch 24: train_loss=0.0348 train_acc=0.9870 test_loss=0.3136 test_acc=0.9327 time=9.02
+Epoch 25: train_loss=0.0332 train_acc=0.9880 test_loss=0.3416 test_acc=0.9308 time=9.05
+Best test accuracy: 0.9347
+Final test accuracy: 0.9308

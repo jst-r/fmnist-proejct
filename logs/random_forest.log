@@ -9,46 +9,46 @@ Data loading complete: 60000 train, 10000 test samples
 
 [MODEL TRAINING]
 Random Forest initialized: n_estimators=100, max_depth=100, criterion=entropy
-Training completed in 11.89 seconds
+Training completed in 9.45 seconds
 
 [MODEL EVALUATION]
-Evaluation completed in 0.86 seconds
+Evaluation completed in 0.51 seconds
 
 ============================================================
 RESULTS
 ============================================================
 Train accuracy:  1.0000
-Test accuracy:   0.8754
-Test precision:  0.8744
-Test recall:     0.8754
+Test accuracy:   0.8755
+Test precision:  0.8746
+Test recall:     0.8755
 ============================================================
 Label: T-shirt/top
-Precision:	0.8149
-Recall:		0.8540
+Precision:	0.8132
+Recall:		0.8620
 Label: Trouser
 Precision:	0.9948
-Recall:		0.9630
+Recall:		0.9590
 Label: Pullover
-Precision:	0.7600
-Recall:		0.8010
-Label: Dress
-Precision:	0.8772
-Recall:		0.9070
-Label: Coat
 Precision:	0.7636
-Recall:		0.8170
+Recall:		0.7980
+Label: Dress
+Precision:	0.8773
+Recall:		0.9080
+Label: Coat
+Precision:	0.7622
+Recall:		0.8140
 Label: Sandal
 Precision:	0.9815
-Recall:		0.9570
+Recall:		0.9550
 Label: Shirt
-Precision:	0.7193
-Recall:		0.5790
+Precision:	0.7264
+Recall:		0.5840
 Label: Sneaker
-Precision:	0.9237
-Recall:		0.9560
+Precision:	0.9243
+Recall:		0.9530
 Label: Bag
-Precision:	0.9577
-Recall:		0.9740
+Precision:	0.9539
+Recall:		0.9720
 Label: Ankle boot
-Precision:	0.9517
-Recall:		0.9460
+Precision:	0.9491
+Recall:		0.9500

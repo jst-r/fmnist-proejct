@@ -5,6 +5,7 @@ import seaborn as sns
 import sklearn.metrics
 import torch
 import torchvision
+import torchvision.transforms as transforms
 from sklearn.ensemble import RandomForestClassifier
 from matplotlib import pyplot as plt
 
@@ -16,7 +17,11 @@ def load_dataset(train: bool):
         "./data",
         train=train,
         download=True,
-        transform=torchvision.transforms.ToTensor(),
+        transform=transforms.Compose(
+            [
+                transforms.ToTensor(),
+            ]
+        ),
     )
 
     loader = torch.utils.data.DataLoader(dataset_train, batch_size=1024, shuffle=False)

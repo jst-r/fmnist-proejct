@@ -60,10 +60,12 @@ def main():
     model, save_path = make_model(resnet=False)
     model.to(device)
     criterion = nn.CrossEntropyLoss()
-    optimizer = torch.optim.Adam(model.parameters(), lr=1e-3)
-    epochs = 30
+    optimizer = torch.optim.Adam(model.parameters())
+    epochs = 25
 
+    test_acc = 0.0
     best_acc = 0.0
+
     for epoch in range(1, epochs + 1):
         start_time = time.time()
         train_loss, train_acc = train_epoch(
@@ -79,9 +81,11 @@ def main():
         )
         if test_acc > best_acc:
             best_acc = test_acc
-            torch.save(model.state_dict(), save_path)
+
+    torch.save(model.state_dict(), save_path)
 
     print(f"Best test accuracy: {best_acc:.4f}")
+    print(f"Final test accuracy: {test_acc:.4f}")
 
 
 if __name__ == "__main__":
