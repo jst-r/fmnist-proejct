@@ -60,7 +60,7 @@ def main():
     model, save_path = make_model(resnet=False)
     model.to(device)
     criterion = nn.CrossEntropyLoss()
-    optimizer = torch.optim.Adam(model.parameters())
+    optimizer = torch.optim.Adam(model.parameters(), lr=1e-3, weight_decay=1e-5)
     epochs = 25
 
     test_acc = 0.0
