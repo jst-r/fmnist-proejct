@@ -2,7 +2,6 @@ from pathlib import Path
 
 import torch
 import torch.nn as nn
-import torchvision
 from torch.utils.data import DataLoader
 from torchvision import datasets, transforms
 
@@ -68,28 +67,23 @@ class MCNN15(nn.Module):
         return x
 
 
-def make_resnet(num_classes: int = 10):
-    model = torchvision.models.resnet50(weights=None, num_classes=10)
-    model.conv1 = nn.Conv2d(1, 64, kernel_size=7, stride=2, padding=3, bias=False)
-    # model.fc = nn.Linear(model.fc.in_features, num_classes)
-    return model
-
-
 def get_loaders(batch_size: int = 128, root=DATA_DIR, use_workers=True):
-    train_ds = datasets.FashionMNIST(
-        root=root,
-        train=True,
-        download=True,
-        transform=transforms.Compose(
+    train_ds_whole = datasets.FashionMNIST(
+        root=root, train=True, download=True, transform=transforms.ToTensor()
+    )
+    train_ds, val_ds = torch.utils.data.random_split(train_ds_whole, [50_000, 10_000])
+    test_ds = datasets.FashionMNIST(
+        root=root, train=False, download=True, transform=transforms.ToTensor()
+    )
+
+    train_ds.transform = (
+        transforms.Compose(
             [
                 transforms.ToTensor(),
                 transforms.RandomHorizontalFlip(),
                 transforms.RandomAffine(20),
             ]
         ),
-    )
-    test_ds = datasets.FashionMNIST(
-        root=root, train=False, download=True, transform=transforms.ToTensor()
     )
 
     num_workers = 2 if use_workers else 0
@@ -100,6 +94,13 @@ def get_loaders(batch_size: int = 128, root=DATA_DIR, use_workers=True):
         num_workers=num_workers,
         pin_memory=True,
     )
+    val_loader = DataLoader(
+        val_ds,
+        batch_size=batch_size,
+        shuffle=False,
+        num_workers=num_workers,
+        pin_memory=True,
+    )
     test_loader = DataLoader(
         test_ds,
         batch_size=batch_size,
@@ -107,4 +108,4 @@ def get_loaders(batch_size: int = 128, root=DATA_DIR, use_workers=True):
         num_workers=num_workers,
         pin_memory=True,
     )
-    return train_loader, test_loader
+    return train_loader, val_loader, test_loader

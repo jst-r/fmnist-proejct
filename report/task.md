@@ -22,7 +22,5 @@ Task: Evaluate two methods to classify the Fashion-MNIST dataset:
   • The report should be between 7 to 10 pages + code. Attach a pdf of the python notebook after it run with
   all results. Alternatively, share the link to your repository.
   • Suggested structure of the report. Page 1. Include a textual abstract and a graphical abstract. It should
-  present the motivation, method, results, and conclusion. Page 2. Introduction and literature review. Page
-
-3. Present the method in text and as a graphic representation. Page 4 and 5. Analysis of results including
-   tables and graphics. Page 6. Conclusion. Page 7. References. Appendix: The code.
+  present the motivation, method, results, and conclusion. Page 2. Introduction and literature review. Page 3. Present the method in text and as a graphic representation. Page 4 and 5. Analysis of results including
+  tables and graphics. Page 6. Conclusion. Page 7. References. Appendix: The code.

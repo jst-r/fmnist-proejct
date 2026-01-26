@@ -114,4 +114,5 @@ sns.heatmap(
 plt.xticks(rotation=45, ha="right")
 plt.xlabel("Predicted Label")
 plt.ylabel("True Label")
+plt.show()
 # %%

@@ -2,8 +2,11 @@ import time
 import torch
 import torch.nn as nn
 from torch.utils.data import DataLoader
+import json
 
 from shared import device, get_loaders, make_model
+
+torch.manual_seed(42)
 
 
 def train_epoch(
@@ -55,37 +58,44 @@ def evaluate(model, loader, criterion, device):
 
 
 def main():
-    train_loader, test_loader = get_loaders(batch_size=128)
+    train_loader, validation_loader, test_loader = get_loaders(batch_size=128)
 
     model, save_path = make_model(resnet=False)
     model.to(device)
     criterion = nn.CrossEntropyLoss()
     optimizer = torch.optim.Adam(model.parameters(), lr=1e-3, weight_decay=1e-5)
-    epochs = 25
+    epochs = 50
 
-    test_acc = 0.0
-    best_acc = 0.0
+    val_acc = 0.0
+    best_val_acc = 0.0
 
     for epoch in range(1, epochs + 1):
         start_time = time.time()
         train_loss, train_acc = train_epoch(
             model, train_loader, criterion, optimizer, device
         )
+        val_loss, val_acc = evaluate(model, validation_loader, criterion, device)
         test_loss, test_acc = evaluate(model, test_loader, criterion, device)
         end_time = time.time()
         print(
-            f"Epoch {epoch:02d}: "
-            f"train_loss={train_loss:.4f} train_acc={train_acc:.4f} "
-            f"test_loss={test_loss:.4f} test_acc={test_acc:.4f} "
-            f"time={end_time - start_time:.2f}"
+            json.dumps(
+                {
+                    "epoch": epoch,
+                    "train_loss": train_loss,
+                    "train_acc": train_acc,
+                    "val_loss": val_loss,
+                    "val_acc": val_acc,
+                    "test_loss": test_loss,
+                    "test_acc": test_acc,
+                    "time": end_time - start_time,
+                }
+            )
         )
-        if test_acc > best_acc:
-            best_acc = test_acc
+        if val_acc > best_val_acc:
+            best_val_acc = val_acc
+            torch.save(model.state_dict(), save_path)
 
     torch.save(model.state_dict(), save_path)
-
-    print(f"Best test accuracy: {best_acc:.4f}")
-    print(f"Final test accuracy: {test_acc:.4f}")
 
 
 if __name__ == "__main__":
