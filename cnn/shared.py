@@ -2,7 +2,7 @@ from pathlib import Path
 
 import torch
 import torch.nn as nn
-from torch.utils.data import DataLoader
+from torch.utils.data import DataLoader, Dataset
 from torchvision import datasets, transforms
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -67,6 +67,21 @@ class MCNN15(nn.Module):
         return x
 
 
+class MyDataset(Dataset):
+    def __init__(self, subset, transform=None):
+        self.subset = subset
+        self.transform = transform
+
+    def __getitem__(self, index):
+        x, y = self.subset[index]
+        if self.transform:
+            x = self.transform(x)
+        return x, y
+
+    def __len__(self):
+        return len(self.subset)
+
+
 def get_loaders(batch_size: int = 128, root=DATA_DIR, use_workers=True):
     train_ds_whole = datasets.FashionMNIST(
         root=root, train=True, download=True, transform=transforms.ToTensor()
@@ -76,7 +91,8 @@ def get_loaders(batch_size: int = 128, root=DATA_DIR, use_workers=True):
         root=root, train=False, download=True, transform=transforms.ToTensor()
     )
 
-    train_ds.transform = (
+    train_ds = MyDataset(
+        train_ds,
         transforms.Compose(
             [
                 transforms.ToTensor(),

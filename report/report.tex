@@ -1,0 +1,178 @@
+\documentclass[a4paper,11pt]{article}
+
+% ============================================
+% PACKAGES
+% ============================================
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+% Arial font (requires XeLaTeX or LuaLaTeX)
+\usepackage{fontspec}
+\setmainfont{Arial}[Scale=1.0]
+
+% Geometry: A4 with 2cm margins all around
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+
+% Line spacing 1.5
+\usepackage{setspace}
+\onehalfspacing
+
+% Justified text with hyphenation
+\usepackage{microtype}
+
+% Paragraph spacing: 6pt after line breaks
+\usepackage{parskip}
+\setlength{\parskip}{6pt}
+\setlength{\parindent}{0pt}
+
+% Page numbers centered at bottom
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Footnotes: Arial 10pt
+\usepackage{footmisc}
+\renewcommand{\footnotelayout}{\fontsize{10}{12}\selectfont}
+
+% Section formatting: Arial 12pt, max 3 levels
+\usepackage{titlesec}
+\titleformat{\section}{\fontsize{12}{14}\bfseries\selectfont}{\thesection}{1em}{}
+\titleformat{\subsection}{\fontsize{12}{14}\bfseries\selectfont}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\fontsize{12}{14}\bfseries\selectfont}{\thesubsubsection}{1em}{}
+
+% No section numbering beyond level 3
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+
+% Title page information
+\usepackage{titling}
+
+% ============================================
+% DOCUMENT INFORMATION (EDIT THESE)
+% ============================================
+\newcommand{\thesistitle}{Your Thesis Title Here}
+\newcommand{\thesistype}{Bachelor's Thesis}
+\newcommand{\coursename}{Course Name Here}
+\newcommand{\courseofstudy}{Course of Study Here}
+\newcommand{\thesisdate}{Date (e.g., January 2026)}
+\newcommand{\authorname}{Your Name}
+\newcommand{\matriculationnumber}{Your Matriculation Number}
+\newcommand{\tutorname}{Tutor's Name}
+
+% ============================================
+% DOCUMENT
+% ============================================
+\begin{document}
+
+% ============================================
+% TITLE PAGE (Page I - no page number shown)
+% ============================================
+\begin{titlepage}
+  \centering
+  \vspace*{2cm}
+
+  {\fontsize{12}{14}\selectfont\bfseries\thesistitle}
+
+  \vspace{2cm}
+
+  {\fontsize{11}{13}\selectfont\thesistype}
+
+  \vspace{2cm}
+
+  {\fontsize{11}{13}\selectfont
+    Course: \coursename\\[0.5cm]
+    Course of Study: \courseofstudy
+  }
+
+  \vfill
+
+  {\fontsize{11}{13}\selectfont
+    \textbf{Author:} \authorname\\[0.3cm]
+    \textbf{Matriculation Number:} \matriculationnumber\\[0.3cm]
+    \textbf{Tutor:} \tutorname\\[0.3cm]
+    \textbf{Date:} \thesisdate
+  }
+
+  \vspace{2cm}
+\end{titlepage}
+
+% ============================================
+% FRONT MATTER (Roman numerals, starting from II)
+% ============================================
+\pagenumbering{Roman}
+\setcounter{page}{2}
+
+% Table of Contents
+\tableofcontents
+\newpage
+
+% List of Figures (if applicable)
+% \listoffigures
+% \newpage
+
+% List of Tables (if applicable)
+% \listoftables
+% \newpage
+
+% ============================================
+% MAIN TEXT (Arabic numerals)
+% ============================================
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\section{Introduction}
+
+Your text here. This is an example paragraph to demonstrate the formatting. The text is justified with hyphenation enabled, using Arial 11pt font. Line spacing is set to 1.5, and there is 6pt spacing after each paragraph.
+
+Here is another paragraph. Notice the spacing between paragraphs and the justified alignment of the text.
+
+\subsection{Background}
+
+This is a subsection (level 2). Headings use Arial 12pt bold font. You can have up to three levels of headings in your thesis.
+
+\subsubsection{Subsection Example}
+
+This is a subsubsection (level 3). This is the maximum depth allowed according to the guidelines.
+
+\section{Main Content}
+
+Add your main content here. Remember that for a bachelor's thesis, you should aim for 7--10 pages of text (excluding title page, table of contents, references, and appendix).
+
+\subsection{Methodology}
+
+Describe your methodology here.
+
+\subsection{Results}
+
+Present your results here.
+
+\section{Conclusion}
+
+Summarize your findings and conclusions here.
+
+% ============================================
+% BIBLIOGRAPHY (not numbered)
+% ============================================
+\newpage
+\section*{References}
+\addcontentsline{toc}{section}{References}
+
+\begin{itemize}
+  \item Author, A. (Year). Title of the work. Publisher.
+  \item Author, B. (Year). Title of another work. Journal Name, Volume(Issue), Pages.
+\end{itemize}
+
+% ============================================
+% APPENDIX (continues Arabic numbering)
+% ============================================
+\newpage
+\appendix
+
+\section{Appendix Title}
+
+Appendix content continues with Arabic page numbering.
+
+\end{document}
