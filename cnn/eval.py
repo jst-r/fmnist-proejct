@@ -44,7 +44,9 @@ pred_start = time.time()
 
 def get_predictions(train: bool):
     pred_start = time.time()
-    train_loader, test_loader = get_loaders(batch_size=512, use_workers=False)
+    train_loader, eval_loader, test_loader = get_loaders(
+        batch_size=512, use_workers=False
+    )
     loader = train_loader if train else test_loader
 
     all_preds = []
