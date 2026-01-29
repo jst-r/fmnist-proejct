@@ -95,8 +95,6 @@ def main():
             best_val_acc = val_acc
             torch.save(model.state_dict(), save_path)
 
-    torch.save(model.state_dict(), save_path)
-
 
 if __name__ == "__main__":
     main()

@@ -95,7 +95,7 @@ def get_loaders(batch_size: int = 128, root=DATA_DIR, use_workers=True):
         train_ds,
         transforms.Compose(
             [
-                transforms.ToTensor(),
+                # transforms.ToTensor(),
                 transforms.RandomHorizontalFlip(),
                 transforms.RandomAffine(
                     degrees=30, translate=(0.1, 0.1), scale=(0.9, 1.1)
