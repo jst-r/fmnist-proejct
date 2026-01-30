@@ -8,8 +8,8 @@ from torchvision import datasets, transforms
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 # device = torch.device("cpu")
 current_dir = Path(__file__).parent
-project_dir = current_dir.parent
-DATA_DIR = project_dir / "data"
+PROJECT_DIR = current_dir.parent
+DATA_DIR = PROJECT_DIR / "data"
 
 
 def make_model(resnet=False, num_classes: int = 10):

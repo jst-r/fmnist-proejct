@@ -42,7 +42,7 @@ print("\n[PREDICTION]")
 pred_start = time.time()
 
 
-def get_predictions(train: bool, return_images: bool = False):
+def get_predictions(train: bool):
     pred_start = time.time()
     train_loader, eval_loader, test_loader = get_loaders(
         batch_size=512, use_workers=False
@@ -51,7 +51,7 @@ def get_predictions(train: bool, return_images: bool = False):
 
     all_preds = []
     all_labels = []
-    all_images = [] if return_images else None
+    all_images = []
 
     with torch.no_grad():
         for imgs, labels in loader:
@@ -61,29 +61,26 @@ def get_predictions(train: bool, return_images: bool = False):
 
             all_preds.append(preds.cpu().numpy())
             all_labels.append(labels.numpy())
-            if return_images:
-                all_images.append(imgs.cpu().numpy())
+            all_images.append(imgs.cpu().numpy())
 
     elapsed = time.time() - pred_start
     print(
         f"[{time.time() - total_start:.2f}s] Generated predictions for {'train' if train else 'test'} set in {elapsed:.2f}s"
     )
 
-    if return_images:
-        return (
-            np.concatenate(all_preds),
-            np.concatenate(all_labels),
-            np.concatenate(all_images),
-        )
-    return np.concatenate(all_preds), np.concatenate(all_labels)
+    return (
+        np.concatenate(all_preds),
+        np.concatenate(all_labels),
+        np.concatenate(all_images),
+    )
 
 
-pred_train, y_train = get_predictions(train=True, return_images=False)
-pred_test, y_test, x_test = get_predictions(train=False, return_images=True)
+# pred_train, y_train, x_train = get_predictions(train=True)
+pred_test, y_test, x_test = get_predictions(train=False)
 
 print("\n[RESULTS]")
 print("=" * 60)
-print(f"Train accuracy:  {sklearn.metrics.accuracy_score(y_train, pred_train):.4f}")
+# print(f"Train accuracy:  {sklearn.metrics.accuracy_score(y_train, pred_train):.4f}")
 print(f"Test accuracy:   {sklearn.metrics.accuracy_score(y_test, pred_test):.4f}")
 print(
     f"Test precision:  {sklearn.metrics.precision_score(y_test, pred_test, average='weighted'):.4f}"
@@ -131,8 +128,15 @@ plt.show()
 # %% Visualize misclassified examples
 print("\n[MISCLASSIFIED EXAMPLES]")
 
+# Configuration
+N_PAIRS = 9  # Number of top misclassification pairs to display
+SAMPLES_PER_PAIR = 9  # Number of random samples per pair
+IMG_SIZE_INCHES = 2  # Size of each 28x28 image in inches
+
 # Find incorrect predictions
 incorrect_mask = pred_test != y_test
+total_incorrect = incorrect_mask.sum()
+shown_incorrect = 0
 incorrect_indices = np.where(incorrect_mask)[0]
 
 # Group by (true_label, pred_label) pairs
@@ -150,29 +154,52 @@ for idx in incorrect_indices:
     pair_counts[pair] += 1
     pair_indices[pair].append(idx)
 
-# Get top 5 most common misclassification pairs
-top_5_pairs = sorted(pair_counts.items(), key=lambda x: x[1], reverse=True)[:5]
+# Get top N most common misclassification pairs
+top_n_pairs = sorted(pair_counts.items(), key=lambda x: x[1], reverse=True)[:N_PAIRS]
 
-print(f"Top 5 misclassification pairs:")
-for (true_label, pred_label), count in top_5_pairs:
+print(f"Top {N_PAIRS} misclassification pairs:")
+for (true_label, pred_label), count in top_n_pairs:
+    shown_incorrect += count
     print(f"  {class_names[true_label]} → {class_names[pred_label]}: {count} examples")
 
-# Create figure with 5 rows x 9 columns
-fig, axes = plt.subplots(5, 9, figsize=(18, 10))
-fig.suptitle(
-    "Top 5 Misclassification Pairs (Random 9 Samples Each)", fontsize=16, y=0.98
+print(
+    f"Sampling {shown_incorrect} examples from {total_incorrect} total. {shown_incorrect / total_incorrect:.2%} of total"
 )
 
-for row, ((true_label, pred_label), count) in enumerate(top_5_pairs):
+# Create figure with N_PAIRS rows x (1 label column + SAMPLES_PER_PAIR image columns)
+fig_width = IMG_SIZE_INCHES * (SAMPLES_PER_PAIR + 2)  # +2 for label column and spacing
+fig_height = IMG_SIZE_INCHES * N_PAIRS
+fig, axes = plt.subplots(N_PAIRS, SAMPLES_PER_PAIR + 1, figsize=(fig_width, fig_height))
+fig.suptitle(
+    f"Top {N_PAIRS} Misclassification Pairs ({SAMPLES_PER_PAIR} Random Samples Each)",
+    fontsize=14,
+    y=0.98,
+)
+
+for row, ((true_label, pred_label), count) in enumerate(top_n_pairs):
     indices = pair_indices[(true_label, pred_label)]
 
-    # Randomly sample 9 examples (or fewer if not enough)
-    sample_size = min(9, len(indices))
+    # Randomly sample examples (or fewer if not enough)
+    sample_size = min(SAMPLES_PER_PAIR, len(indices))
     sampled_indices = np.random.choice(indices, size=sample_size, replace=False)
 
-    # Fill the row
-    for col in range(9):
-        ax = axes[row, col]
+    # First column: label
+    label_ax = axes[row, 0]
+    label_ax.text(
+        0.5,
+        0.5,
+        f"True: {class_names[true_label]}\nPrediction: {class_names[pred_label]}",
+        ha="center",
+        va="center",
+        fontsize=9,
+        fontweight="bold",
+        transform=label_ax.transAxes,
+    )
+    label_ax.axis("off")
+
+    # Remaining columns: images
+    for col in range(SAMPLES_PER_PAIR):
+        ax = axes[row, col + 1]
 
         if col < sample_size:
             idx = sampled_indices[col]
@@ -185,22 +212,10 @@ for row, ((true_label, pred_label), count) in enumerate(top_5_pairs):
                 img = np.transpose(img, (1, 2, 0))
 
             ax.imshow(img, cmap="gray" if len(img.shape) == 2 else None)
-            ax.axis("off")
-        else:
-            ax.axis("off")
-
-    # Add row label on the left
-    axes[row, 0].set_ylabel(
-        f"{class_names[true_label]}\n→\n{class_names[pred_label]}",
-        rotation=0,
-        ha="right",
-        va="center",
-        fontsize=10,
-        labelpad=20,
-    )
+        ax.axis("off")
 
 plt.tight_layout()
-plt.subplots_adjust(top=0.93)
+plt.subplots_adjust(top=0.95)
 plt.show()
 
 print(f"\n[{time.time() - total_start:.2f}s] Evaluation complete")
