@@ -1,17 +1,17 @@
 # Fdb version 4
-["biber report"] 1769893739.16141 "report.bcf" "report.bbl" "report" 1769894400.78195 0
+["biber report"] 1769896422.23618 "report.bcf" "report.bbl" "report" 1769897072.09669 0
   "references.bib" 1769892069 5137 6e1d749fc098240bdc5b1874cc54c4ce ""
-  "report.bcf" 1769894399 136326 6d924aaaaa8ce68fa7b4c8b74018157f "xelatex"
+  "report.bcf" 1769897070 136396 aa13188e03d046fbee0f0e9a14fc5c88 "xelatex"
   (generated)
   "report.bbl"
   "report.blg"
   (rewritten before read)
-["xdvipdfmx"] 1769894399.6714 "report.xdv" "report.pdf" "report" 1769894400.7883 0
-  "report.xdv" 1769894399 304648 1bdb6e1efc3464e66d5cd0a7095d1fd4 "xelatex"
+["xdvipdfmx"] 1769897071.01385 "report.xdv" "report.pdf" "report" 1769897072.10068 0
+  "report.xdv" 1769897070 372408 6bcec59f61e72d90eba2e5a6a6bc75a5 "xelatex"
   (generated)
   "report.pdf"
   (rewritten before read)
-["xelatex"] 1769894397.04997 "report.tex" "report.xdv" "report" 1769894400.78239 0
+["xelatex"] 1769897068.78859 "c:/Users/Admin/Documents/code/university/fmnist-proejct/report/tex/report.tex" "report.xdv" "report" 1769897072.0969 0
   "../../plots/cnn/confusion_test.png" 1769877795 48396 3d4bdc779a5518f65ddc3f84ecb97083 ""
   "../../plots/cnn/confusion_train.png" 1769877794 51372 567ee160a85e679d8ca62e4dc6594aba ""
   "../../plots/cnn/misclassified.png" 1769877795 166161 85c14bc418ee825edb11ade92b2106e2 ""
@@ -57,7 +57,6 @@
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex" 1756451143 35251 5ff5b5b310c5ac882610e0ccc99095e7 ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex" 1756451143 22012 81b34a0aa8fa1a6158cc6220b00e4f10 ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex" 1756451144 8893 e851de2175338fdf7c17f3e091d94618 ""
-  "C:/Users/Admin/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypositioning.code.tex" 1756451144 3937 3f208572dd82c71103831da976d74f1a ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex" 1756451144 11518 738408f795261b70ce8dd47459171309 ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex" 1756451144 186859 0445d9a41a87648b4723e04765409541 ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex" 1756451144 32995 ac577023e12c0e4bd8aa420b2e852d1a ""
@@ -175,11 +174,12 @@
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/tex/latex/tools/array.sty" 1761901070 15651 9d7c62df82cb29a555c00550babfe364 ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
-  "report.aux" 1769894399 11513 2eb87e1712c39f3725739d79db7cd796 "xelatex"
-  "report.bbl" 1769893740 46305 e54488e98e938a04170b27d44e96600c "biber report"
-  "report.run.xml" 1769894399 2476 cf4e0f7ca5100b3b28735de53a5a3a45 "xelatex"
-  "report.tex" 1769894335 33522 3dd7698b03654e5183ad5f6f04570dd0 ""
-  "report.toc" 1769894399 1918 2cff8153db69d677a4a9d7ef3d7b1eae "xelatex"
+  "c:/Users/Admin/Documents/code/university/fmnist-proejct/report/tex/report.tex" 1769897063 40535 02b5ef490830a87e3220754858dcede1 ""
+  "report.aux" 1769897070 13156 db89fe8b648d1bf9d12ed1b46c555753 "xelatex"
+  "report.bbl" 1769896424 46305 e54488e98e938a04170b27d44e96600c "biber report"
+  "report.run.xml" 1769897070 2476 cf4e0f7ca5100b3b28735de53a5a3a45 "xelatex"
+  "report.tex" 1769897063 40535 02b5ef490830a87e3220754858dcede1 ""
+  "report.toc" 1769897070 2583 61ccc34f587295576174ea681370ff5f "xelatex"
   (generated)
   "report.aux"
   "report.bcf"
