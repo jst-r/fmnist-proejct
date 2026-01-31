@@ -1,17 +1,17 @@
 # Fdb version 4
-["biber report"] 1769898227.97827 "report.bcf" "report.bbl" "report" 1769898239.08932 0
+["biber report"] 1769898545.92682 "report.bcf" "report.bbl" "report" 1769898549.15247 0
   "references.bib" 1769898193 5379 81c18d0f88a79dc3075298054db8bbd7 ""
-  "report.bcf" 1769898237 136466 3deb487a8e0016ae0d251dc863e75d79 "xelatex"
+  "report.bcf" 1769898545 136466 3deb487a8e0016ae0d251dc863e75d79 "xelatex"
   (generated)
   "report.bbl"
   "report.blg"
   (rewritten before read)
-["xdvipdfmx"] 1769898237.64364 "report.xdv" "report.pdf" "report" 1769898239.09328 0
-  "report.xdv" 1769898237 375040 2f7950e089d20a8cabb4f988b4f6ce70 "xelatex"
+["xdvipdfmx"] 1769898547.78962 "report.xdv" "report.pdf" "report" 1769898549.15707 0
+  "report.xdv" 1769898545 375984 9bdacb158e4b47b73ec544cbed97e612 "xelatex"
   (generated)
   "report.pdf"
   (rewritten before read)
-["xelatex"] 1769898235.04631 "report.tex" "report.xdv" "report" 1769898239.08951 0
+["xelatex"] 1769898543.21208 "report.tex" "report.xdv" "report" 1769898549.15262 0
   "../../plots/cnn/confusion_test.png" 1769897767 48396 3d4bdc779a5518f65ddc3f84ecb97083 ""
   "../../plots/cnn/confusion_train.png" 1769897797 51372 567ee160a85e679d8ca62e4dc6594aba ""
   "../../plots/cnn/misclassified.png" 1769897768 344564 edec3e978cd5e8dbca78c9a43ac67c74 ""
@@ -174,11 +174,11 @@
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/tex/latex/tools/array.sty" 1761901070 15651 9d7c62df82cb29a555c00550babfe364 ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
-  "report.aux" 1769898237 13065 d9706ff171e713bbe6f9eec7c1ea00a2 "xelatex"
-  "report.bbl" 1769898229 50003 f862adf45631e1c0ae9cf16ead890e73 "biber report"
-  "report.run.xml" 1769898237 2476 cf4e0f7ca5100b3b28735de53a5a3a45 "xelatex"
-  "report.tex" 1769898196 40777 bfb611c3ab33e93348a6aa35ee3ebd9e ""
-  "report.toc" 1769898237 2583 ff159f5c4e75a6c8f714ddc5e971abba "xelatex"
+  "report.aux" 1769898545 13065 d9706ff171e713bbe6f9eec7c1ea00a2 "xelatex"
+  "report.bbl" 1769898547 50003 f862adf45631e1c0ae9cf16ead890e73 "biber report"
+  "report.run.xml" 1769898545 2476 cf4e0f7ca5100b3b28735de53a5a3a45 "xelatex"
+  "report.tex" 1769898538 40853 352624da4ea6a9bd11adca4a0c464444 ""
+  "report.toc" 1769898545 2583 ff159f5c4e75a6c8f714ddc5e971abba "xelatex"
   (generated)
   "report.aux"
   "report.bcf"

@@ -156,7 +156,7 @@ The fashion retail industry requires automated product classification systems to
 
 Despite extensive benchmarking studies on Fashion-MNIST, there remains limited systematic comparison between CNN and Random Forest classifiers specifically designed for production deployment scenarios. Most prior work focuses exclusively on maximizing accuracy through increasingly complex deep learning architectures, without addressing the practical trade-offs that influence technology selection in real-world applications. Production systems must balance accuracy against training time, model size, inference latency, and computational infrastructure requirements.
 
-This study addresses this gap by conducting a comprehensive comparison of two representative approaches: (1) the MCNN15 CNN architecture \parencite{bhatnagar2017}, a 15-layer network specifically optimized for Fashion-MNIST that achieves state-of-the-art results among moderate-depth models, and (2) the optimal Random Forest configuration identified by \textcite{xiao2017}, representing traditional machine learning's best performance on this benchmark. We evaluate these classifiers across multiple dimensions including overall accuracy, per-category precision and recall, confusion patterns, training times, model sizes, and inference speeds to provide evidence-based recommendations for production deployment.
+This study addresses this gap by conducting a comprehensive comparison of two representative approaches: (1) the MCNN15 CNN architecture \parencite{bhatnagar2017}, a 15-layer network specifically optimized for Fashion-MNIST that achieves state-of-the-art results among moderate-depth models, and (2) the optimal Random Forest configuration identified by \textcite{xiao2017}, representing traditional machine learning's best performance on this benchmark. These classifiers are evaluated across multiple dimensions including overall accuracy, per-category precision and recall, confusion patterns, training times, model sizes, and inference speeds to provide evidence-based recommendations for production deployment.
 
 Our analysis uses the Fashion-MNIST benchmark dataset \parencite{xiao2017}, which provides a standardized evaluation framework for fashion classification algorithms. Section 2 reviews the literature on CNN architectures and benchmarking studies. Section 3 provides a detailed description of the Fashion-MNIST dataset. Section 4 outlines the methodology including model configurations and training procedures. Sections 5 and 6 present results and analysis, followed by conclusions in Section 7.
 
@@ -280,7 +280,7 @@ Images were preprocessed differently for each classifier to accommodate their ar
 
 \subsection{Random Forest Classifier}
 
-Following \textcite{xiao2017}, we used scikit-learn with: n\_estimators=100, max\_depth=100, criterion=entropy, n\_jobs=-1. This configuration balances model complexity with generalization.
+Following \textcite{xiao2017}, the implementation uses scikit-learn with: n\_estimators=100, max\_depth=100, criterion=entropy, n\_jobs=-1. This configuration balances model complexity with generalization.
 
 \subsection{CNN Architecture (MCNN15)}
 
@@ -475,7 +475,7 @@ The CNN's learned hierarchical features better capture subtle distinctions in co
 
 \subsection{Production Recommendation}
 
-We recommend the CNN approach for production fashion classification systems based on:
+The CNN approach is recommended for production fashion classification systems based on:
 
 \begin{enumerate}
 	\item \textbf{Accuracy:} 6.11 percentage point improvement reduces misclassifications by 611 per 10,000 items
@@ -502,7 +502,7 @@ This comparative study demonstrates clear advantages for CNN-based approaches in
 
 \section{Code Implementation}
 
-\noindent\textit{Note: The complete implementation including all source code, training scripts, evaluation code, and generated plots is available in the attached archive.}
+\noindent\textit{Note: The complete implementation including all source code, training scripts, evaluation code, and generated plots is available in a GitHub repository located at \url{https://github.com/jst-r/fmnist-proejct}.}
 
 \subsection{Random Forest Training}
 
