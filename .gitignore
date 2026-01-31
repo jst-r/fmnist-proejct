@@ -10,3 +10,6 @@ wheels/
 .venv
 
 data/
+
+# rf model is chonky and needs lfs
+random_forest_model.pkl
