@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.1.28)  31 JAN 2026 23:29
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.1.28)  31 JAN 2026 23:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1297,73 +1297,58 @@ Overfull \hbox (1.38577pt too wide) in paragraph at lines 148--149
  [][] 
  []
 
-[1]
-Overfull \hbox (0.99153pt too wide) in paragraph at lines 175--176
-\TU/Arial(0)/m/n/10.95 equivariance—make them particularly suitable for 28$\OMS
-/cmsy/m/n/10.95 ^^B$\TU/Arial(0)/m/n/10.95 28 grayscale images where global sel
-f-attention
- []
-
-[2] [3] [4]
+[1] [2]
 File: ../../plots/dataset/samples.png Graphic file (type bmp)
 <../../plots/dataset/samples.png>
- [5]
-Overfull \hbox (22.30617pt too wide) in paragraph at lines 283--284
+ [3]
+Overfull \hbox (22.30617pt too wide) in paragraph at lines 240--241
 \TU/Arial(0)/m/n/10.95 Following []Xiao et al. (2017), the implementation uses 
 scikit-learn with: n_estimators=100, max_depth=100,
  []
 
-[6]
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `lmtt' (encoding: TU).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
- [7]
-Underfull \hbox (badness 1590) in paragraph at lines 344--345
-\TU/Arial(0)/m/n/10.95 out training indicates minimal overfitting and
- []
-
+LaTeX Font Info:    Font shape `TU/Arial(0)/m/n' will be
+(Font)              scaled to size 5.0pt on input line 258.
+[4]
 File: ../../plots/cnn/training.png Graphic file (type bmp)
 <../../plots/cnn/training.png>
-[8]
+ [5]
 File: ../../plots/random_forest/confusion_train.png Graphic file (type bmp)
 <../../plots/random_forest/confusion_train.png>
 File: ../../plots/random_forest/confusion_test.png Graphic file (type bmp)
 <../../plots/random_forest/confusion_test.png>
+ [6]
 File: ../../plots/cnn/confusion_train.png Graphic file (type bmp)
 <../../plots/cnn/confusion_train.png>
 File: ../../plots/cnn/confusion_test.png Graphic file (type bmp)
 <../../plots/cnn/confusion_test.png>
- [9]
 File: ../../plots/cnn/misclassified.png Graphic file (type bmp)
 <../../plots/cnn/misclassified.png>
-LaTeX Font Info:    Font shape `TU/Arial(0)/m/n' will be
-(Font)              scaled to size 7.0pt on input line 437.
-LaTeX Font Info:    Font shape `TU/Arial(0)/m/n' will be
-(Font)              scaled to size 5.0pt on input line 437.
 File: ../../plots/random_forest/misclassified.png Graphic file (type bmp)
 <../../plots/random_forest/misclassified.png>
- [10] [11]
-LaTeX Font Info:    Font shape `TU/Arial(0)/m/it' will be
-(Font)              scaled to size 10.95pt on input line 498.
-
-Overfull \hbox (19.80579pt too wide) in paragraph at lines 498--498
-[][]\TU/Arial(0)/m/n/10.95 Goodfellow, I., Bengio, Y., & Courville, A. (2016). 
-\TU/Arial(0)/m/it/10.95 Deep learning\TU/Arial(0)/m/n/10.95 . MIT Press. $[][][
-][][] [] [] [] [][][] [] [][][][][][][][][][][][][][][][] []
+ [7] [8]
+Overfull \hbox (6.87709pt too wide) in paragraph at lines 457--458
+\TU/Arial(0)/m/n/10.95 models, testing ensemble CNN-RF hybrid approaches, and a
+nalyzing performance on higher-resolution
  []
 
+[9]
+LaTeX Font Info:    Font shape `TU/Arial(0)/m/it' will be
+(Font)              scaled to size 10.95pt on input line 463.
 
-Overfull \hbox (3.77548pt too wide) in paragraph at lines 498--498
+Overfull \hbox (3.77548pt too wide) in paragraph at lines 463--463
 [][]\TU/Arial(0)/m/n/10.95 Mukhamediev, R. I. (2024). State-of-the-art results 
 with the fashion-mnist dataset. \TU/Arial(0)/m/it/10.95 Mathematics\TU/Arial(0)
 /m/n/10.95 , \TU/Arial(0)/m/it/10.95 12\TU/Arial(0)/m/n/10.95 (20),
  []
 
-[12] [13]
+[10]
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `lmtt' (encoding: TU).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 510.
- [14] [15] (report.aux)
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 479.
+ [11] [12] (report.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-29>
@@ -1373,12 +1358,12 @@ Package logreq Info: Writing requests to 'report.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 30150 strings out of 402987
- 626349 string characters out of 5448524
- 1803549 words of memory out of 5000000
- 58458 multiletter control sequences out of 15000+600000
- 634802 words of font info for 83 fonts, out of 8000000 for 9000
+ 30212 strings out of 402987
+ 626884 string characters out of 5448524
+ 1771452 words of memory out of 5000000
+ 58521 multiletter control sequences out of 15000+600000
+ 634567 words of font info for 81 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 84i,12n,94p,1197b,5132s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,12n,94p,1197b,5050s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on report.xdv (17 pages, 375984 bytes).
+Output written on report.xdv (14 pages, 279948 bytes).
