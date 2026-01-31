@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.1.28)  29 JAN 2026 08:19
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.1.28)  31 JAN 2026 14:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/Admin/Documents/code/university/fmnist-proejct/report/report.tex
-(c:/Users/Admin/Documents/code/university/fmnist-proejct/report/report.tex
+**c:/Users/Admin/Documents/code/university/fmnist-proejct/report/tex/report.tex
+(c:/Users/Admin/Documents/code/university/fmnist-proejct/report/tex/report.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-29>
 (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
@@ -12,14 +12,14 @@ Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
 (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/base\size11.clo
 File: size11.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
 )
-\c@part=\count275
-\c@section=\count276
-\c@subsection=\count277
-\c@subsubsection=\count278
-\c@paragraph=\count279
-\c@subparagraph=\count280
-\c@figure=\count281
-\c@table=\count282
+\c@part=\count271
+\c@section=\count272
+\c@subsection=\count273
+\c@subsubsection=\count274
+\c@paragraph=\count275
+\c@subparagraph=\count276
+\c@figure=\count277
+\c@table=\count278
 \abovecaptionskip=\skip49
 \belowcaptionskip=\skip50
 \bibindent=\dimen148
@@ -27,55 +27,592 @@ File: size11.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
 Package: inputenc 2024/02/08 v1.3d Input encoding file
 \inpenc@prehook=\toks17
 \inpenc@posthook=\toks18
+
+
+Package inputenc Warning: inputenc package ignored with utf8 based engines.
+
 ) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
 Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
-) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\fontspec.sty (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xparse.sty (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 116.
+ (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd
+File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\fontspec.sty (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xparse.sty (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
 Package: expl3 2025-12-29 L3 programming layer (loader) 
- (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
-File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count283
+ (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-xetex.def
+File: l3backend-xetex.def 2025-10-09 L3 backend support: XeTeX
+\g__graphics_track_int=\count279
+\g__pdfannot_backend_int=\count280
+\g__pdfannot_backend_link_int=\count281
 ))
 Package: xparse 2025-10-09 L3 Experimental document command parser
 )
 Package: fontspec 2025/09/29 v2.9g Font selection for XeLaTeX and LuaLaTeX
+ (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\fontspec-xetex.sty
+Package: fontspec-xetex 2025/09/29 v2.9g Font selection for XeLaTeX and LuaLaTeX
+\l__fontspec_script_int=\count282
+\l__fontspec_language_int=\count283
+\l__fontspec_strnum_int=\count284
+\l__fontspec_tmp_int=\count285
+\l__fontspec_tmpa_int=\count286
+\l__fontspec_tmpb_int=\count287
+\l__fontspec_tmpc_int=\count288
+\l__fontspec_em_int=\count289
+\l__fontspec_emdef_int=\count290
+\l__fontspec_strong_int=\count291
+\l__fontspec_strongdef_int=\count292
+\l__fontspec_tmpa_dim=\dimen149
+\l__fontspec_tmpb_dim=\dimen150
+\l__fontspec_tmpc_dim=\dimen151
+ (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
+Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
+) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\fontspec.cfg)))
+
+Package fontspec Info: 
+(fontspec)             Arial scale = 1.0.
 
 
-C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\fontspec.sty:101: Fatal Package fontspec Error: The fontspec package requires either XeTeX or
-(fontspec)                      LuaTeX.
-(fontspec)                      
-(fontspec)                      You must change your typesetting engine to,
-(fontspec)                      e.g., "xelatex" or "lualatex" instead of
-(fontspec)                      "latex" or "pdflatex".
-
-Type <return> to continue.
- ...                                              
-                                                  
-l.101 \msg_fatal:nn {fontspec} {cannot-use-pdftex}
-                                                  
-
-LaTeX does not know anything more about this error, sorry.
-
-Try typing <return> to proceed.
-If that doesn't work, type X <return> to quit.
-
-This is a fatal error: LaTeX will abort.
+Package fontspec Info: 
+(fontspec)             Arial scale = 1.0.
 
 
+Package fontspec Info: 
+(fontspec)             Arial scale = 1.0.
 
-C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\fontspec.sty:101: Emergency stop.
-<read *> 
-         
-l.101 \msg_fatal:nn {fontspec} {cannot-use-pdftex}
-                                                  
-*** (cannot \read from terminal in nonstop modes)
 
- 
+Package fontspec Info: 
+(fontspec)             Arial/B scale = 1.0.
+
+
+Package fontspec Info: 
+(fontspec)             Arial/B scale = 1.0.
+
+
+Package fontspec Info: 
+(fontspec)             Arial/I scale = 1.0.
+
+
+Package fontspec Info: 
+(fontspec)             Arial/I scale = 1.0.
+
+
+Package fontspec Info: 
+(fontspec)             Arial/BI scale = 1.0.
+
+
+Package fontspec Info: 
+(fontspec)             Arial/BI scale = 1.0.
+
+
+Package fontspec Info: 
+(fontspec)             Font family 'Arial(0)' created for font 'Arial' with
+(fontspec)             options [Ligatures=TeX,Scale=1.0].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->s*[1.0]"Arial/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
+(fontspec)             <->s*[1.0]"Arial/OT:script=latn;language=dflt;+smcp;mapping=tex-text;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[1.0]"Arial/B/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
+(fontspec)             <->s*[1.0]"Arial/B/OT:script=latn;language=dflt;+smcp;mapping=tex-text;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->s*[1.0]"Arial/I/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+(fontspec)             <->s*[1.0]"Arial/I/OT:script=latn;language=dflt;+smcp;mapping=tex-text;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->s*[1.0]"Arial/BI/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
+(fontspec)             <->s*[1.0]"Arial/BI/OT:script=latn;language=dflt;+smcp;mapping=tex-text;"
+
+LaTeX Font Info:    Font shape `TU/Arial(0)/m/n' will be
+(Font)              scaled to size 10.95pt on input line 11.
+ (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+ (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks19
+) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+ (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+Package: iftex 2024/12/12 v1.0g TeX engine tests
+))
+\Gm@cnth=\count293
+\Gm@cntv=\count294
+\c@Gm@tempcnt=\count295
+\Gm@bindingoffset=\dimen152
+\Gm@wd@mp=\dimen153
+\Gm@odd@mp=\dimen154
+\Gm@even@mp=\dimen155
+\Gm@layoutwidth=\dimen156
+\Gm@layoutheight=\dimen157
+\Gm@layouthoffset=\dimen158
+\Gm@layoutvoffset=\dimen159
+\Gm@dimlist=\toks20
+ (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg)) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/setspace\setspace.sty
+Package: setspace 2022/12/04 v6.7b set line spacing
+) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype.sty
+Package: microtype 2025/07/09 v3.2b Micro-typographical refinements (RS)
+ (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
+Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count296
+)
+\MT@toks=\toks21
+\MT@tempbox=\box53
+\MT@count=\count297
+LaTeX Info: Redefining \noprotrusionifhmode on input line 1087.
+LaTeX Info: Redefining \leftprotrusion on input line 1088.
+\MT@prot@toks=\toks22
+LaTeX Info: Redefining \rightprotrusion on input line 1107.
+LaTeX Info: Redefining \textls on input line 1449.
+\MT@outer@kern=\dimen160
+LaTeX Info: Redefining \microtypecontext on input line 2053.
+LaTeX Info: Redefining \textmicrotypecontext on input line 2070.
+\MT@listname@count=\count298
+ (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype-xetex.def
+File: microtype-xetex.def 2025/07/09 v3.2b Definitions specific to xetex (RS)
+LaTeX Info: Redefining \lsstyle on input line 443.
+LaTeX Info: Redefining \lslig on input line 451.
+\MT@outer@space=\skip51
+)
+Package microtype Info: Loading configuration file microtype.cfg.
+ (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype.cfg
+File: microtype.cfg 2025/07/09 v3.2b microtype main configuration file (RS)
+)
+LaTeX Info: Redefining \microtypesetup on input line 3065.
+) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/parskip\parskip.sty
+Package: parskip 2021-03-14 v2.0h non-zero parskip adjustments
+ (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+ (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+))) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
+Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
+\f@nch@headwidth=\skip52
+\f@nch@offset@elh=\skip53
+\f@nch@offset@erh=\skip54
+\f@nch@offset@olh=\skip55
+\f@nch@offset@orh=\skip56
+\f@nch@offset@elf=\skip57
+\f@nch@offset@erf=\skip58
+\f@nch@offset@olf=\skip59
+\f@nch@offset@orf=\skip60
+\f@nch@height=\skip61
+\f@nch@footalignment=\skip62
+\f@nch@widthL=\skip63
+\f@nch@widthC=\skip64
+\f@nch@widthR=\skip65
+\@temptokenb=\toks23
+) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/footmisc\footmisc.sty
+Package: footmisc 2025/05/09 v7.0b a miscellany of footnote facilities
+\FN@temptoken=\toks24
+\footnotemargin=\dimen161
+Package footmisc Info: Declaring symbol style bringhurst on input line 549.
+Package footmisc Info: Declaring symbol style chicago on input line 557.
+Package footmisc Info: Declaring symbol style wiley on input line 566.
+Package footmisc Info: Declaring symbol style lamport-robust on input line 577.
+Package footmisc Info: Declaring symbol style lamport* on input line 597.
+Package footmisc Info: Declaring symbol style lamport*-robust on input line 618.
+) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/titlesec\titlesec.sty
+Package: titlesec 2025/01/04 v2.17 Sectioning titles
+\ttl@box=\box54
+\beforetitleunit=\skip66
+\aftertitleunit=\skip67
+\ttl@plus=\dimen162
+\ttl@minus=\dimen163
+\ttl@toksa=\toks25
+\titlewidth=\dimen164
+\titlewidthlast=\dimen165
+\titlewidthfirst=\dimen166
+) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/titling\titling.sty
+Package: titling 2009/09/04 v2.1d maketitle typesetting
+\thanksmarkwidth=\skip68
+\thanksmargin=\skip69
+\droptitle=\skip70
+) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
+ (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
+ (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
+) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: xetex.def on input line 106.
+ (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\xetex.def
+File: xetex.def 2025/11/01 v5.0p Graphics/color driver for xetex
+))
+\Gin@req@height=\dimen167
+\Gin@req@width=\dimen168
+) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen169
+\lightrulewidth=\dimen170
+\cmidrulewidth=\dimen171
+\belowrulesep=\dimen172
+\belowbottomsep=\dimen173
+\aboverulesep=\dimen174
+\abovetopsep=\dimen175
+\cmidrulesep=\dimen176
+\cmidrulekern=\dimen177
+\defaultaddspace=\dimen178
+\@cmidla=\count299
+\@cmidlb=\count300
+\@aboverulesep=\dimen179
+\@belowrulesep=\dimen180
+\@thisruleclass=\count301
+\@lastruleclass=\count302
+\@thisrulewidth=\dimen181
+) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
+Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
+\col@sep=\dimen182
+\ar@mcellbox=\box55
+\extrarowheight=\dimen183
+\NC@list=\toks26
+\extratabsurround=\skip71
+\backup@length=\skip72
+\ar@cellbox=\box56
+) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.sty
+Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
+\multirow@colwidth=\skip73
+\multirow@cntb=\count303
+\multirow@dima=\skip74
+\bigstrutjot=\dimen184
+) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count304
+\float@exts=\toks27
+\float@box=\box57
+\@float@everytoks=\toks28
+\@floatcapt=\box58
+) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+Package: amsmath 2025/07/09 v2.17z AMS math features
+\@mathmargin=\skip75
+
+For additional information on amsmath, use the `?' option.
+(C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
+Package: amstext 2024/11/17 v2.01 AMS text
+ (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks29
+\ex@=\dimen185
+)) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen186
+) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count305
+LaTeX Info: Redefining \frac on input line 233.
+\uproot@=\count306
+\leftroot@=\count307
+LaTeX Info: Redefining \overline on input line 398.
+LaTeX Info: Redefining \colon on input line 409.
+\classnum@=\count308
+\DOTSCASE@=\count309
+LaTeX Info: Redefining \ldots on input line 495.
+LaTeX Info: Redefining \dots on input line 498.
+LaTeX Info: Redefining \cdots on input line 619.
+\Mathstrutbox@=\box59
+\strutbox@=\box60
+LaTeX Info: Redefining \big on input line 721.
+LaTeX Info: Redefining \Big on input line 722.
+LaTeX Info: Redefining \bigg on input line 723.
+LaTeX Info: Redefining \Bigg on input line 724.
+\big@size=\dimen187
+LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
+\macc@depth=\count310
+LaTeX Info: Redefining \bmod on input line 904.
+LaTeX Info: Redefining \pmod on input line 909.
+LaTeX Info: Redefining \smash on input line 939.
+LaTeX Info: Redefining \relbar on input line 969.
+LaTeX Info: Redefining \Relbar on input line 970.
+\c@MaxMatrixCols=\count311
+\dotsspace@=\muskip17
+\c@parentequation=\count312
+\dspbrk@lvl=\count313
+\tag@help=\toks30
+\row@=\count314
+\column@=\count315
+\maxfields@=\count316
+\andhelp@=\toks31
+\eqnshift@=\dimen188
+\alignsep@=\dimen189
+\tagshift@=\dimen190
+\tagwidth@=\dimen191
+\totwidth@=\dimen192
+\lineht@=\dimen193
+\@envbody=\toks32
+\multlinegap=\skip76
+\multlinetaggap=\skip77
+\mathdisplay@stack=\toks33
+LaTeX Info: Redefining \[ on input line 2950.
+LaTeX Info: Redefining \] on input line 2951.
+) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
+\lst@mode=\count317
+\lst@gtempboxa=\box61
+\lst@token=\toks34
+\lst@length=\count318
+\lst@currlwidth=\dimen194
+\lst@column=\count319
+\lst@pos=\count320
+\lst@lostspace=\dimen195
+\lst@width=\dimen196
+\lst@newlines=\count321
+\lst@lineno=\count322
+\lst@maxwidth=\dimen197
+ (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstpatch.sty
+File: lstpatch.sty 2025/11/14 1.11b (Carsten Heinz)
+) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
+File: lstmisc.sty 2025/11/14 1.11b (Carsten Heinz)
+\c@lstnumber=\count323
+\lst@skipnumbers=\count324
+\lst@framebox=\box62
+) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
+File: listings.cfg 2025/11/14 1.11b listings configuration
+))
+Package: listings 2025/11/14 1.11b (Carsten Heinz)
+
+==> First Aid for listings.sty no longer applied!
+    Expected:
+        2024/09/23 1.10c (Carsten Heinz)
+    but found:
+        2025/11/14 1.11b (Carsten Heinz)
+    so I'm assuming it got fixed.
+(C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
+ (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: xetex.def on input line 274.
+ (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
+Package xcolor Info: Model `RGB' extended on input line 1365.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
+) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2025/11/14 1.11b listings language file
+) (report.aux)
+\openout1 = `report.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+
+Package fontspec Info: 
+(fontspec)             Adjusting the maths setup (use [no-math] to avoid
+(fontspec)             this).
+
+\symlegacymaths=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 94.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 94.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 94.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 94.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 94.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 94.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 94.
+LaTeX Font Info:    Redeclaring math accent \check on input line 94.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 94.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 94.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 94.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 94.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 94.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 94.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 94.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 94.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 94.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 94.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 94.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 94.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 94.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 94.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 94.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 94.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `normal' on input line 94.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> TU/Arial(0)/m/n on input line 94.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `bold' on input line 94.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> TU/Arial(0)/m/n on input line 94.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  TU/Arial(0)/m/n --> TU/Arial(0)/m/n on input line 94.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> TU/Arial(0)/m/it on input line 94.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> TU/Arial(0)/b/n on input line 94.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 94.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 94.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  TU/Arial(0)/m/n --> TU/Arial(0)/b/n on input line 94.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> TU/Arial(0)/b/it on input line 94.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 94.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 94.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+*geometry* verbose mode - [ preamble ] result:
+* driver: xetex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(56.9055pt, 483.69687pt, 56.9055pt)
+* v-part:(T,H,B)=(56.9055pt, 731.23584pt, 56.9055pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=483.69687pt
+* \textheight=731.23584pt
+* \oddsidemargin=-15.36449pt
+* \evensidemargin=-15.36449pt
+* \topmargin=-52.36449pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=11.0pt
+* \footskip=30.0pt
+* \marginparwidth=50.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+LaTeX Info: Redefining \microtypecontext on input line 94.
+Package microtype Info: Applying patch `item' on input line 94.
+Package microtype Info: Applying patch `toc' on input line 94.
+Package microtype Info: Applying patch `eqnum' on input line 94.
+Package microtype Info: Applying patch `footnote' on input line 94.
+Package microtype Info: Applying patch `verbatim' on input line 94.
+LaTeX Info: Redefining \microtypesetup on input line 94.
+Package microtype Info: Character protrusion enabled (level 2).
+Package microtype Info: Using default protrusion set `alltext'.
+Package microtype Info: No adjustment of tracking.
+Package microtype Info: No adjustment of spacing.
+Package microtype Info: No adjustment of kerning.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `Arial' (encoding: TU).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+\c@lstlisting=\count325
+LaTeX Font Info:    Font shape `TU/Arial(0)/m/n' will be
+(Font)              scaled to size 12.0pt on input line 103.
+LaTeX Font Info:    Font shape `TU/Arial(0)/b/n' will be
+(Font)              scaled to size 12.0pt on input line 103.
+LaTeX Font Info:    Font shape `TU/Arial(0)/m/n' will be
+(Font)              scaled to size 11.0pt on input line 107.
+LaTeX Font Info:    Font shape `TU/Arial(0)/b/n' will be
+(Font)              scaled to size 11.0pt on input line 119.
+[1
+
+] (report.toc
+LaTeX Font Info:    Font shape `TU/Arial(0)/b/n' will be
+(Font)              scaled to size 10.95pt on input line 1.
+LaTeX Font Info:    Font shape `TU/Arial(0)/m/n' will be
+(Font)              scaled to size 8.0pt on input line 2.
+LaTeX Font Info:    Font shape `TU/Arial(0)/m/n' will be
+(Font)              scaled to size 6.0pt on input line 2.
+ (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-cmr.cfg
+File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
+) [2])
+\tf@toc=\write3
+\openout3 = `report.toc'.
+
+ [3] (report.lof)
+\tf@lof=\write4
+\openout4 = `report.lof'.
+
+ [4] (report.lot)
+\tf@lot=\write5
+\openout5 = `report.lot'.
+
+ [5] [1] [2] [3] [4] [5] [6] [7] [8]
+Overfull \hbox (12.1471pt too wide) in paragraph at lines 420--421
+[]\TU/Arial(0)/m/n/10.95 Both classifiers demonstrate excellent performance on easily distinguishable categories such as trousers
+ []
+
+[9] [10] [11] [12]
+Overfull \hbox (5.27734pt too wide) in paragraph at lines 548--549
+[]\TU/Arial(0)/b/n/10.95 Training Frequency: \TU/Arial(0)/m/n/10.95 Fashion classification models typically require infrequent retraining (weekly
+ []
+
+[13] [14] [15]
+LaTeX Font Info:    Font shape `TU/Arial(0)/m/it' will be
+(Font)              scaled to size 10.95pt on input line 615.
+
+Overfull \hbox (45.25656pt too wide) in paragraph at lines 615--616
+\TU/Arial(0)/m/n/10.95 marking Machine Learning Algorithms. \TU/Arial(0)/m/it/10.95 arXiv preprint arXiv:1708.07747\TU/Arial(0)/m/n/10.95 . https://arxiv.org/abs/1708.07747 
+ []
+
+
+Overfull \hbox (138.2289pt too wide) in paragraph at lines 617--618
+[]\TU/Arial(0)/m/n/10.95 TensorFlow. (2024). Basic classification: Classify images of clothing. https://www.tensorflow.org/tutorials/keras/classification
+ []
+
+
+Overfull \hbox (74.37769pt too wide) in paragraph at lines 619--620
+[]\TU/Arial(0)/m/n/10.95 Breiman, L. (2001). Random forests. \TU/Arial(0)/m/it/10.95 Machine Learning\TU/Arial(0)/m/n/10.95 , 45(1), 5-32. https://doi.org/10.1023/A:1010933404324 
+ []
+
+
+Overfull \hbox (34.2241pt too wide) in paragraph at lines 631--632
+[]\TU/Arial(0)/m/n/10.95 Zalando Research. (2017). Fashion-MNIST Benchmarks. https://github.com/zalandoresearch/fashion-
+ []
+
+[16]
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `lmtt' (encoding: TU).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+LaTeX Font Info:    Font shape `TU/Arial(0)/m/n' will be
+(Font)              scaled to size 10.0pt on input line 645.
+ [17] [18] [19] [20] [21] (report.aux)
+ ***********
+LaTeX2e <2025-11-01>
+L3 programming layer <2025-12-29>
+ ***********
+ ) 
 Here is how much of TeX's memory you used:
- 804 strings out of 467871
- 14495 string characters out of 5418376
- 433733 words of memory out of 5000000
- 29752 multiletter control sequences out of 15000+600000
- 628790 words of font info for 42 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 73i,0n,77p,321b,42s stack positions out of 10000i,1000n,20000p,200000b,200000s
-C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\fontspec.sty:101:  ==> Fatal error occurred, no output PDF file produced!
+ 10343 strings out of 402987
+ 211173 string characters out of 5448524
+ 987745 words of memory out of 5000000
+ 38927 multiletter control sequences out of 15000+600000
+ 634316 words of font info for 77 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 73i,12n,94p,1262b,1729s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+Output written on report.xdv (26 pages, 500404 bytes).

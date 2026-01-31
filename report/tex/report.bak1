@@ -97,32 +97,32 @@
 % TITLE PAGE
 % ============================================
 \begin{titlepage}
-	\centering
-	\vspace*{2cm}
+  \centering
+  \vspace*{2cm}
 
-	{\fontsize{12}{14}\selectfont\bfseries\thesistitle}
+  {\fontsize{12}{14}\selectfont\bfseries\thesistitle}
 
-	\vspace{2cm}
+  \vspace{2cm}
 
-	{\fontsize{11}{13}\selectfont\thesistype}
+  {\fontsize{11}{13}\selectfont\thesistype}
 
-	\vspace{2cm}
+  \vspace{2cm}
 
-	{\fontsize{11}{13}\selectfont
-		Course: \coursename\\[0.5cm]
-		Course of Study: \courseofstudy
-	}
+  {\fontsize{11}{13}\selectfont
+    Course: \coursename\\[0.5cm]
+    Course of Study: \courseofstudy
+  }
 
-	\vfill
+  \vfill
 
-	{\fontsize{11}{13}\selectfont
-		\textbf{Author:} \authorname\\[0.3cm]
-		\textbf{Matriculation Number:} \matriculationnumber\\[0.3cm]
-		\textbf{Tutor:} \tutorname\\[0.3cm]
-		\textbf{Date:} \thesisdate
-	}
+  {\fontsize{11}{13}\selectfont
+    \textbf{Author:} \authorname\\[0.3cm]
+    \textbf{Matriculation Number:} \matriculationnumber\\[0.3cm]
+    \textbf{Tutor:} \tutorname\\[0.3cm]
+    \textbf{Date:} \thesisdate
+  }
 
-	\vspace{2cm}
+  \vspace{2cm}
 \end{titlepage}
 
 % ============================================
@@ -165,16 +165,16 @@ The CNN's superior accuracy, despite longer training time, makes it the recommen
 \subsection*{Graphical Abstract}
 
 \begin{figure}[H]
-	\centering
-	\begin{tabular}{|c|c|c|}
-		\hline
-		\textbf{Method} & \textbf{Accuracy} & \textbf{Training Time} \\
-		\hline
-		CNN (MCNN15)    & 93.63\%           & 900 seconds            \\
-		Random Forest   & 87.52\%           & 9.45 seconds           \\
-		\hline
-	\end{tabular}
-	\caption{Performance summary comparing CNN and Random Forest classifiers}
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{Method} & \textbf{Accuracy} & \textbf{Training Time} \\
+\hline
+CNN (MCNN15) & 93.63\% & 900 seconds \\
+Random Forest & 87.52\% & 9.45 seconds \\
+\hline
+\end{tabular}
+\caption{Performance summary comparing CNN and Random Forest classifiers}
 \end{figure}
 
 The graphical abstract presents the key findings of this comparative study. The CNN architecture achieved 6.11 percentage points higher accuracy than Random Forest, at the cost of approximately 95 times longer training time. Both methods identify shirts as the most challenging category due to visual similarity with T-shirts and pullovers.
@@ -203,12 +203,12 @@ This study addresses the critical question of algorithm selection for production
 The primary objectives of this study are:
 
 \begin{enumerate}
-	\item Implement and evaluate a Convolutional Neural Network (MCNN15 architecture) for Fashion-MNIST classification following TensorFlow's classification methodology
-	\item Implement and evaluate the optimal Random Forest classifier configuration identified by Xiao et al. (2017)
-	\item Compare classification performance through confusion matrices and precision/recall metrics
-	\item Analyze category-specific performance to identify challenging garment types
-	\item Compare training times and computational requirements
-	\item Provide recommendations for production deployment based on accuracy, computational cost, and practical constraints
+    \item Implement and evaluate a Convolutional Neural Network (MCNN15 architecture) for Fashion-MNIST classification following TensorFlow's classification methodology
+    \item Implement and evaluate the optimal Random Forest classifier configuration identified by Xiao et al. (2017)
+    \item Compare classification performance through confusion matrices and precision/recall metrics
+    \item Analyze category-specific performance to identify challenging garment types
+    \item Compare training times and computational requirements
+    \item Provide recommendations for production deployment based on accuracy, computational cost, and practical constraints
 \end{enumerate}
 
 \subsection{Report Structure}
@@ -245,9 +245,9 @@ Convolutional Neural Networks, pioneered by LeCun et al. (1998), have revolution
 Recent surveys of CNN architectures for Fashion-MNIST have reported accuracy rates ranging from 90-95\%, with performance heavily dependent on architectural choices, training strategies, and regularization techniques. Key architectural innovations that improve performance include:
 
 \begin{itemize}
-	\item \textbf{Batch Normalization:} Introduced by Ioffe and Szegedy (2015), this technique accelerates deep network training by reducing internal covariate shift, allowing higher learning rates and more stable training.
-	\item \textbf{Data Augmentation:} Perez and Wang (2017) demonstrated that affine transformations (rotation, translation, scaling) act as powerful regularizers, improving model generalization by helping CNNs learn transformation-invariant features.
-	\item \textbf{Adam Optimizer:} Kingma and Ba (2014) introduced Adam (Adaptive Moment Estimation), which computes adaptive learning rates for each parameter, combining advantages of AdaGrad and RMSProp for efficient training of deep networks.
+    \item \textbf{Batch Normalization:} Introduced by Ioffe and Szegedy (2015), this technique accelerates deep network training by reducing internal covariate shift, allowing higher learning rates and more stable training.
+    \item \textbf{Data Augmentation:} Perez and Wang (2017) demonstrated that affine transformations (rotation, translation, scaling) act as powerful regularizers, improving model generalization by helping CNNs learn transformation-invariant features.
+    \item \textbf{Adam Optimizer:} Kingma and Ba (2014) introduced Adam (Adaptive Moment Estimation), which computes adaptive learning rates for each parameter, combining advantages of AdaGrad and RMSProp for efficient training of deep networks.
 \end{itemize}
 
 The MCNN15 architecture specifically utilizes a deep stack of 15 convolutional layers organized into three hierarchical groups, with batch normalization following each convolutional operation. This design systematically reduces spatial dimensions while increasing feature complexity, enabling the network to capture both low-level texture patterns and high-level garment structures.
@@ -274,8 +274,8 @@ For the Random Forest classifier, images were flattened into 784-dimensional fea
 The CNN implementation maintained the original 2D image structure with dimensions (1, 28, 28) representing single-channel grayscale images. Data augmentation was applied exclusively to the training set to improve model robustness and generalization:
 
 \begin{itemize}
-	\item \textbf{Random Horizontal Flip:} Applied with 50\% probability to simulate garment presentation variations
-	\item \textbf{Random Affine Transformations:} Rotation up to 30 degrees, translation up to 10\% in each direction, and scaling between 0.9 and 1.1
+    \item \textbf{Random Horizontal Flip:} Applied with 50\% probability to simulate garment presentation variations
+    \item \textbf{Random Affine Transformations:} Rotation up to 30 degrees, translation up to 10\% in each direction, and scaling between 0.9 and 1.1
 \end{itemize}
 
 These augmentations help the model learn features invariant to small geometric transformations typical in real-world fashion photography. The validation and test sets used only normalization without augmentation to ensure consistent evaluation.
@@ -285,10 +285,10 @@ These augmentations help the model learn features invariant to small geometric t
 The Random Forest classifier was implemented using scikit-learn with hyperparameters based on the optimal configuration identified by Xiao et al. (2017):
 
 \begin{itemize}
-	\item \textbf{n\_estimators:} 100 decision trees
-	\item \textbf{max\_depth:} 100 (limiting tree depth to prevent overfitting)
-	\item \textbf{criterion:} entropy (information gain for split quality)
-	\item \textbf{n\_jobs:} -1 (parallel processing across all CPU cores)
+    \item \textbf{n\_estimators:} 100 decision trees
+    \item \textbf{max\_depth:} 100 (limiting tree depth to prevent overfitting)
+    \item \textbf{criterion:} entropy (information gain for split quality)
+    \item \textbf{n\_jobs:} -1 (parallel processing across all CPU cores)
 \end{itemize}
 
 This configuration balances model complexity with generalization capability while maintaining reasonable training time. The entropy criterion was selected based on prior work showing superior performance for Fashion-MNIST compared to Gini impurity.
@@ -300,27 +300,27 @@ The CNN implementation employed the MCNN15 architecture, a deep convolutional ne
 \subsubsection{Architecture Specifications}
 
 \begin{table}[H]
-	\centering
-	\caption{MCNN15 Architecture Details}
-	\begin{tabular}{|l|c|c|}
-		\hline
-		\textbf{Layer Group}     & \textbf{Operations}                               & \textbf{Output Dimensions}                 \\
-		\hline
-		\multirow{2}{*}{Group 1} & 5 Conv-BN-ReLU blocks                             & \multirow{2}{*}{32 channels, 14$\times$14} \\
-		                         & (32$\to$64$\to$64$\to$32$\to$64)                  &                                            \\
-		                         & 2$\times$2 Max Pooling                            &                                            \\
-		\hline
-		\multirow{2}{*}{Group 2} & 5 Conv-BN-ReLU blocks                             & \multirow{2}{*}{32 channels, 7$\times$7}   \\
-		                         & (64$\to$256$\to$192$\to$128$\to$64$\to$32)        &                                            \\
-		                         & 2$\times$2 Max Pooling                            &                                            \\
-		\hline
-		\multirow{2}{*}{Group 3} & 5 Conv-BN-ReLU blocks                             & \multirow{2}{*}{32 channels, 3$\times$3}   \\
-		                         & (32$\to$256$\to$256$\to$256$\to$128$\to$32)       &                                            \\
-		                         & 2$\times$2 Max Pooling                            &                                            \\
-		\hline
-		Classifier               & Flatten + Linear(288, 32) + ReLU + Linear(32, 10) & 10 classes                                 \\
-		\hline
-	\end{tabular}
+\centering
+\caption{MCNN15 Architecture Details}
+\begin{tabular}{|l|c|c|}
+\hline
+\textbf{Layer Group} & \textbf{Operations} & \textbf{Output Dimensions} \\
+\hline
+\multirow{2}{*}{Group 1} & 5 Conv-BN-ReLU blocks & \multirow{2}{*}{32 channels, 14$\times$14} \\
+& (32$\to$64$\to$64$\to$32$\to$64) & \\
+& 2$\times$2 Max Pooling & \\
+\hline
+\multirow{2}{*}{Group 2} & 5 Conv-BN-ReLU blocks & \multirow{2}{*}{32 channels, 7$\times$7} \\
+& (64$\to$256$\to$192$\to$128$\to$64$\to$32) & \\
+& 2$\times$2 Max Pooling & \\
+\hline
+\multirow{2}{*}{Group 3} & 5 Conv-BN-ReLU blocks & \multirow{2}{*}{32 channels, 3$\times$3} \\
+& (32$\to$256$\to$256$\to$256$\to$128$\to$32) & \\
+& 2$\times$2 Max Pooling & \\
+\hline
+Classifier & Flatten + Linear(288, 32) + ReLU + Linear(32, 10) & 10 classes \\
+\hline
+\end{tabular}
 \end{table}
 
 Each convolutional layer employed 3$\times$3 kernels with padding=1 to maintain spatial dimensions within groups, followed by batch normalization and ReLU activation. The progressive increase and subsequent decrease in channel counts enables the network to first expand feature complexity and then condense to discriminative representations.
@@ -336,12 +336,12 @@ The Random Forest model was trained on the complete 60,000 training samples (fla
 The CNN was trained using the following configuration:
 
 \begin{itemize}
-	\item \textbf{Optimizer:} Adam with learning rate 1e-3
-	\item \textbf{Weight Decay:} 1e-5 (L2 regularization)
-	\item \textbf{Epochs:} 50
-	\item \textbf{Batch Size:} 128
-	\item \textbf{Loss Function:} Cross-Entropy Loss
-	\item \textbf{Device:} GPU with CUDA support when available
+    \item \textbf{Optimizer:} Adam with learning rate 1e-3
+    \item \textbf{Weight Decay:} 1e-5 (L2 regularization)
+    \item \textbf{Epochs:} 50
+    \item \textbf{Batch Size:} 128
+    \item \textbf{Loss Function:} Cross-Entropy Loss
+    \item \textbf{Device:} GPU with CUDA support when available
 \end{itemize}
 
 Model checkpoints were saved based on best validation accuracy achieved during training. Early stopping was implicitly implemented by monitoring validation performance, with the best model selected from epoch 28 (93.48\% validation accuracy) for final evaluation.
@@ -353,11 +353,11 @@ Training proceeded for 50 epochs with an average time of approximately 18 second
 Both classifiers were evaluated using identical metrics:
 
 \begin{itemize}
-	\item \textbf{Overall Accuracy:} Proportion of correctly classified samples
-	\item \textbf{Precision:} Weighted average of per-class precision (TP / (TP + FP))
-	\item \textbf{Recall:} Weighted average of per-class recall (TP / (TP + FN))
-	\item \textbf{Per-Class Metrics:} Individual precision and recall for each fashion category
-	\item \textbf{Confusion Matrices:} Visual representation of classification errors
+    \item \textbf{Overall Accuracy:} Proportion of correctly classified samples
+    \item \textbf{Precision:} Weighted average of per-class precision (TP / (TP + FP))
+    \item \textbf{Recall:} Weighted average of per-class recall (TP / (TP + FN))
+    \item \textbf{Per-Class Metrics:} Individual precision and recall for each fashion category
+    \item \textbf{Confusion Matrices:} Visual representation of classification errors
 \end{itemize}
 
 Training time was measured for both classifiers to compare computational efficiency. All evaluations were conducted on the held-out test set of 10,000 samples to ensure unbiased performance estimates.
@@ -374,19 +374,19 @@ Training time was measured for both classifiers to compare computational efficie
 The experimental results demonstrate clear performance advantages for the CNN approach across all primary metrics. Table \ref{tab:overall} presents the comprehensive performance comparison between the two classifiers.
 
 \begin{table}[H]
-	\centering
-	\caption{Overall Performance Comparison}
-	\label{tab:overall}
-	\begin{tabular}{|l|c|c|c|}
-		\hline
-		\textbf{Metric} & \textbf{Random Forest} & \textbf{CNN} & \textbf{Improvement} \\
-		\hline
-		Test Accuracy   & 87.52\%                & 93.63\%      & +6.11\%              \\
-		Test Precision  & 87.42\%                & 93.63\%      & +6.21\%              \\
-		Test Recall     & 87.52\%                & 93.63\%      & +6.11\%              \\
-		Training Time   & 9.45 seconds           & 900 seconds  & 95$\times$ longer    \\
-		\hline
-	\end{tabular}
+\centering
+\caption{Overall Performance Comparison}
+\label{tab:overall}
+\begin{tabular}{|l|c|c|c|}
+\hline
+\textbf{Metric} & \textbf{Random Forest} & \textbf{CNN} & \textbf{Improvement} \\
+\hline
+Test Accuracy & 87.52\% & 93.63\% & +6.11\% \\
+Test Precision & 87.42\% & 93.63\% & +6.21\% \\
+Test Recall & 87.52\% & 93.63\% & +6.11\% \\
+Training Time & 9.45 seconds & 900 seconds & 95$\times$ longer \\
+\hline
+\end{tabular}
 \end{table}
 
 The CNN achieved a substantial improvement of 6.11 percentage points in test accuracy, representing a 48.8\% reduction in classification error rate (from 12.48\% to 6.37\% error). This improvement comes at the cost of significantly longer training time, with the CNN requiring approximately 95 times more computational time than the Random Forest classifier.
@@ -396,25 +396,25 @@ The CNN achieved a substantial improvement of 6.11 percentage points in test acc
 Analysis of per-category performance reveals interesting patterns in classifier behavior and identifies specific fashion categories that present classification challenges for both approaches.
 
 \begin{table}[H]
-	\centering
-	\caption{Per-Category Precision and Recall on Test Set}
-	\label{tab:percategory}
-	\begin{tabular}{|l|c|c|c|c|}
-		\hline
-		\textbf{Category} & \textbf{RF Precision} & \textbf{RF Recall} & \textbf{CNN Precision} & \textbf{CNN Recall} \\
-		\hline
-		T-shirt/top       & 81.26\%               & 86.30\%            & 86.70\%                & 89.20\%             \\
-		Trouser           & 99.28\%               & 95.90\%            & 99.20\%                & 98.50\%             \\
-		Pullover          & 76.59\%               & 79.50\%            & 90.50\%                & 89.30\%             \\
-		Dress             & 87.32\%               & 90.90\%            & 91.80\%                & 93.50\%             \\
-		Coat              & 76.07\%               & 82.00\%            & 87.50\%                & 91.40\%             \\
-		Sandal            & 98.05\%               & 95.50\%            & 98.80\%                & 98.60\%             \\
-		Shirt             & 72.38\%               & 57.40\%            & 82.00\%                & 77.50\%             \\
-		Sneaker           & 92.48\%               & 95.90\%            & 96.10\%                & 98.20\%             \\
-		Bag               & 95.58\%               & 97.30\%            & 98.80\%                & 98.70\%             \\
-		Ankle boot        & 95.17\%               & 94.50\%            & 98.30\%                & 96.80\%             \\
-		\hline
-	\end{tabular}
+\centering
+\caption{Per-Category Precision and Recall on Test Set}
+\label{tab:percategory}
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+\textbf{Category} & \textbf{RF Precision} & \textbf{RF Recall} & \textbf{CNN Precision} & \textbf{CNN Recall} \\
+\hline
+T-shirt/top & 81.26\% & 86.30\% & 86.70\% & 89.20\% \\
+Trouser & 99.28\% & 95.90\% & 99.20\% & 98.50\% \\
+Pullover & 76.59\% & 79.50\% & 90.50\% & 89.30\% \\
+Dress & 87.32\% & 90.90\% & 91.80\% & 93.50\% \\
+Coat & 76.07\% & 82.00\% & 87.50\% & 91.40\% \\
+Sandal & 98.05\% & 95.50\% & 98.80\% & 98.60\% \\
+Shirt & 72.38\% & 57.40\% & 82.00\% & 77.50\% \\
+Sneaker & 92.48\% & 95.90\% & 96.10\% & 98.20\% \\
+Bag & 95.58\% & 97.30\% & 98.80\% & 98.70\% \\
+Ankle boot & 95.17\% & 94.50\% & 98.30\% & 96.80\% \\
+\hline
+\end{tabular}
 \end{table}
 
 Both classifiers demonstrate excellent performance on easily distinguishable categories such as trousers (99\%+ precision for both methods) and bags (95\%+ precision). However, significant performance gaps emerge in categories with high visual similarity, particularly upper-body garments.
@@ -424,23 +424,23 @@ Both classifiers demonstrate excellent performance on easily distinguishable cat
 \subsubsection{Best Performing Categories}
 
 \begin{itemize}
-	\item \textbf{Trouser:} Both classifiers achieved exceptional performance (99\%+ precision) due to distinctive shape characteristics and limited visual similarity with other categories. The vertical elongation and lack of similarity to other garment types make trousers highly distinguishable.
-
-	\item \textbf{Bag:} High performance (95.58\% RF, 98.80\% CNN precision) resulting from distinct non-clothing characteristics and consistent structural features. Bags lack the limb-related features present in wearable garments, making them easier to identify.
-
-	\item \textbf{Sandal:} Strong performance (98.05\% RF, 98.80\% CNN precision) attributed to unique open-toe design and footwear-specific features that distinguish sandals from closed shoes.
+    \item \textbf{Trouser:} Both classifiers achieved exceptional performance (99\%+ precision) due to distinctive shape characteristics and limited visual similarity with other categories. The vertical elongation and lack of similarity to other garment types make trousers highly distinguishable.
+    
+    \item \textbf{Bag:} High performance (95.58\% RF, 98.80\% CNN precision) resulting from distinct non-clothing characteristics and consistent structural features. Bags lack the limb-related features present in wearable garments, making them easier to identify.
+    
+    \item \textbf{Sandal:} Strong performance (98.05\% RF, 98.80\% CNN precision) attributed to unique open-toe design and footwear-specific features that distinguish sandals from closed shoes.
 \end{itemize}
 
 \subsubsection{Challenging Categories}
 
 \begin{itemize}
-	\item \textbf{Shirt:} Consistently worst-performing category for both classifiers (72.38\% Random Forest, 82.00\% CNN precision). This poor performance stems from high visual similarity with T-shirts and pullovers, combined with significant intra-class variation in shirt designs (collar types, sleeve lengths, patterns).
-
-	\item \textbf{Pullover:} Moderate performance degradation (76.59\% Random Forest, 90.50\% CNN precision) due to similarity with coats and shirts, particularly in neckline and sleeve designs.
-
-	\item \textbf{Coat:} Performance challenges (76.07\% Random Forest, 87.50\% CNN precision) related to similarity with pullovers and jackets, combined with high variation in coat lengths and styles.
-
-	\item \textbf{T-shirt/top:} Lower performance (81.26\% Random Forest, 86.70\% CNN precision) due to confusion with shirts, particularly when T-shirts have collar-like designs or printed patterns resembling formal shirts.
+    \item \textbf{Shirt:} Consistently worst-performing category for both classifiers (72.38\% Random Forest, 82.00\% CNN precision). This poor performance stems from high visual similarity with T-shirts and pullovers, combined with significant intra-class variation in shirt designs (collar types, sleeve lengths, patterns).
+    
+    \item \textbf{Pullover:} Moderate performance degradation (76.59\% Random Forest, 90.50\% CNN precision) due to similarity with coats and shirts, particularly in neckline and sleeve designs.
+    
+    \item \textbf{Coat:} Performance challenges (76.07\% Random Forest, 87.50\% CNN precision) related to similarity with pullovers and jackets, combined with high variation in coat lengths and styles.
+    
+    \item \textbf{T-shirt/top:} Lower performance (81.26\% Random Forest, 86.70\% CNN precision) due to confusion with shirts, particularly when T-shirts have collar-like designs or printed patterns resembling formal shirts.
 \end{itemize}
 
 The CNN demonstrates superior performance across all challenging categories, with particularly notable improvements on Pullover (+13.91\%), Coat (+11.43\%), and Shirt (+9.62\%). This suggests that the learned hierarchical features better distinguish subtle visual differences between similar garment types.
@@ -450,18 +450,18 @@ The CNN demonstrates superior performance across all challenging categories, wit
 Training time represents a significant differentiator between the two approaches:
 
 \begin{table}[H]
-	\centering
-	\caption{Training Time Comparison}
-	\label{tab:trainingtime}
-	\begin{tabular}{|l|c|c|}
-		\hline
-		\textbf{Metric}      & \textbf{Random Forest} & \textbf{CNN} \\
-		\hline
-		Total Training Time  & 9.45 seconds           & 900 seconds  \\
-		Per-Epoch Time       & N/A (single-pass)      & 18 seconds   \\
-		Training Samples/sec & 6,349                  & 56           \\
-		\hline
-	\end{tabular}
+\centering
+\caption{Training Time Comparison}
+\label{tab:trainingtime}
+\begin{tabular}{|l|c|c|}
+\hline
+\textbf{Metric} & \textbf{Random Forest} & \textbf{CNN} \\
+\hline
+Total Training Time & 9.45 seconds & 900 seconds \\
+Per-Epoch Time & N/A (single-pass) & 18 seconds \\
+Training Samples/sec & 6,349 & 56 \\
+\hline
+\end{tabular}
 \end{table}
 
 The Random Forest classifier demonstrated exceptional computational efficiency, completing training in under 10 seconds while achieving respectable 87.52\% accuracy. This efficiency makes Random Forest highly suitable for resource-constrained environments, rapid prototyping, or applications requiring frequent model updates.
@@ -477,10 +477,10 @@ Confusion matrices were generated for both classifiers to visualize classificati
 The Random Forest confusion matrix reveals several systematic misclassification patterns:
 
 \begin{itemize}
-	\item \textbf{Shirt misclassifications:} 163 shirts misclassified as T-shirts, 121 as pullovers, 91 as coats. This pattern reflects the visual similarity between upper-body garments.
-	\item \textbf{Pullover confusion:} 123 pullovers misclassified as coats, 57 as shirts. The similarity in sleeve length and overall silhouette contributes to this confusion.
-	\item \textbf{Coat errors:} 90 coats misclassified as pullovers, 49 as shirts. The overlap in outerwear categories creates ambiguity.
-	\item \textbf{Footwear confusion:} 44 ankle boots misclassified as sneakers, likely due to similar overall shape.
+    \item \textbf{Shirt misclassifications:} 163 shirts misclassified as T-shirts, 121 as pullovers, 91 as coats. This pattern reflects the visual similarity between upper-body garments.
+    \item \textbf{Pullover confusion:} 123 pullovers misclassified as coats, 57 as shirts. The similarity in sleeve length and overall silhouette contributes to this confusion.
+    \item \textbf{Coat errors:} 90 coats misclassified as pullovers, 49 as shirts. The overlap in outerwear categories creates ambiguity.
+    \item \textbf{Footwear confusion:} 44 ankle boots misclassified as sneakers, likely due to similar overall shape.
 \end{itemize}
 
 The top misclassification pairs account for 816 of the 1,248 total errors (65.4\%), indicating concentrated confusion among visually similar categories.
@@ -490,9 +490,9 @@ The top misclassification pairs account for 816 of the 1,248 total errors (65.4\
 The CNN confusion matrix shows reduced but qualitatively similar error patterns:
 
 \begin{itemize}
-	\item \textbf{Reduced shirt errors:} CNN misclassifies fewer shirts overall, with most errors still occurring between shirt, T-shirt, and pullover categories.
-	\item \textbf{Improved upper-body distinction:} The CNN better distinguishes coats from pullovers, likely through learned texture and structural features.
-	\item \textbf{Minimal footwear confusion:} Ankle boot and sneaker confusion is nearly eliminated, with the CNN achieving high precision on both categories.
+    \item \textbf{Reduced shirt errors:} CNN misclassifies fewer shirts overall, with most errors still occurring between shirt, T-shirt, and pullover categories.
+    \item \textbf{Improved upper-body distinction:} The CNN better distinguishes coats from pullovers, likely through learned texture and structural features.
+    \item \textbf{Minimal footwear confusion:} Ankle boot and sneaker confusion is nearly eliminated, with the CNN achieving high precision on both categories.
 \end{itemize}
 
 The CNN reduces total misclassifications from 1,248 to 637, representing a 48.9\% reduction in errors.
@@ -519,13 +519,13 @@ Both classifiers performed worst on the Shirt category, followed by Pullover and
 The Shirt category presents the greatest difficulty due to several factors:
 
 \begin{enumerate}
-	\item \textbf{Visual Similarity:} Shirts share structural elements with T-shirts (torso covering), pullovers (long sleeves possible), and coats (collars, buttons). These overlapping features create classification ambiguity, particularly for simple neural network architectures.
-
-	\item \textbf{High Intra-Class Variability:} The Shirt category encompasses diverse styles including dress shirts, casual shirts, flannel shirts, and polo shirts. This variability means that features learned from one shirt subtype may not generalize to others.
-
-	\item \textbf{Grayscale Limitation:} The absence of color information in Fashion-MNIST removes an important discriminative cue. In real-world scenarios, shirt colors and patterns often distinguish them from T-shirts.
-
-	\item \textbf{Resolution Constraints:} At 28$\times$28 pixels, fine details like collar shapes, button patterns, and fabric textures are difficult to discern, particularly for classifiers operating on flattened features.
+    \item \textbf{Visual Similarity:} Shirts share structural elements with T-shirts (torso covering), pullovers (long sleeves possible), and coats (collars, buttons). These overlapping features create classification ambiguity, particularly for simple neural network architectures.
+    
+    \item \textbf{High Intra-Class Variability:} The Shirt category encompasses diverse styles including dress shirts, casual shirts, flannel shirts, and polo shirts. This variability means that features learned from one shirt subtype may not generalize to others.
+    
+    \item \textbf{Grayscale Limitation:} The absence of color information in Fashion-MNIST removes an important discriminative cue. In real-world scenarios, shirt colors and patterns often distinguish them from T-shirts.
+    
+    \item \textbf{Resolution Constraints:} At 28$\times$28 pixels, fine details like collar shapes, button patterns, and fabric textures are difficult to discern, particularly for classifiers operating on flattened features.
 \end{enumerate}
 
 The CNN's improvement on Shirt classification (from 57.4\% to 77.5\% recall) demonstrates that hierarchical feature learning can partially overcome these challenges by identifying subtle texture and shape patterns invisible to the Random Forest's pixel-wise analysis.
@@ -545,13 +545,13 @@ The CNN's superior generalization is particularly evident in challenging categor
 The significant difference in training time (95$\times$ longer for CNN) represents an important consideration for practical deployment scenarios. However, several factors mitigate this concern:
 
 \begin{enumerate}
-	\item \textbf{Training Frequency:} Fashion classification models typically require infrequent retraining (weekly or monthly) as new products are introduced, making longer training times acceptable for the accuracy gains achieved.
-
-	\item \textbf{Inference Efficiency:} Once trained, both models achieve comparable inference speeds. The CNN's forward pass through 15 convolutional layers is highly optimized on modern GPUs, enabling real-time classification in production environments.
-
-	\item \textbf{Accuracy-Adjusted Cost:} The substantial accuracy improvement justifies increased computational cost in most production scenarios. The reduction of 611 errors per 10,000 items can translate to significant cost savings in inventory management, customer satisfaction, and operational efficiency.
-
-	\item \textbf{Scalability:} While Random Forest training is faster, it scales poorly with dataset size (memory requirements grow with training samples). CNN training scales more favorably for very large datasets through minibatch processing.
+    \item \textbf{Training Frequency:} Fashion classification models typically require infrequent retraining (weekly or monthly) as new products are introduced, making longer training times acceptable for the accuracy gains achieved.
+    
+    \item \textbf{Inference Efficiency:} Once trained, both models achieve comparable inference speeds. The CNN's forward pass through 15 convolutional layers is highly optimized on modern GPUs, enabling real-time classification in production environments.
+    
+    \item \textbf{Accuracy-Adjusted Cost:} The substantial accuracy improvement justifies increased computational cost in most production scenarios. The reduction of 611 errors per 10,000 items can translate to significant cost savings in inventory management, customer satisfaction, and operational efficiency.
+    
+    \item \textbf{Scalability:} While Random Forest training is faster, it scales poorly with dataset size (memory requirements grow with training samples). CNN training scales more favorably for very large datasets through minibatch processing.
 \end{enumerate}
 
 \subsection{Production Deployment Recommendation}
@@ -559,21 +559,21 @@ The significant difference in training time (95$\times$ longer for CNN) represen
 Based on the comprehensive evaluation, we recommend the CNN approach for production fashion classification systems. This recommendation is justified by:
 
 \begin{enumerate}
-	\item \textbf{Superior Accuracy:} The 6.11 percentage point improvement (48.8\% error reduction) provides tangible business value through reduced misclassifications.
-
-	\item \textbf{Category-Specific Performance:} The CNN's advantage is most pronounced in challenging categories where accuracy is most needed. The improvement on Shirt classification (+20.1\% recall) is particularly valuable given this category's importance in fashion retail.
-
-	\item \textbf{Robustness:} The CNN demonstrates better generalization and is more amenable to data augmentation, making it more robust to real-world variations.
-
-	\item \textbf{Future-Proofing:} CNN architectures are actively researched and improved, with transfer learning capabilities enabling adaptation to new categories or datasets with minimal retraining.
+    \item \textbf{Superior Accuracy:} The 6.11 percentage point improvement (48.8\% error reduction) provides tangible business value through reduced misclassifications.
+    
+    \item \textbf{Category-Specific Performance:} The CNN's advantage is most pronounced in challenging categories where accuracy is most needed. The improvement on Shirt classification (+20.1\% recall) is particularly valuable given this category's importance in fashion retail.
+    
+    \item \textbf{Robustness:} The CNN demonstrates better generalization and is more amenable to data augmentation, making it more robust to real-world variations.
+    
+    \item \textbf{Future-Proofing:} CNN architectures are actively researched and improved, with transfer learning capabilities enabling adaptation to new categories or datasets with minimal retraining.
 \end{enumerate}
 
 The Random Forest classifier remains a viable alternative for:
 \begin{itemize}
-	\item Rapid prototyping and baseline establishment
-	\item Resource-constrained environments without GPU access
-	\item Applications where interpretability is prioritized over accuracy
-	\item Scenarios requiring frequent model retraining with limited computational budget
+    \item Rapid prototyping and baseline establishment
+    \item Resource-constrained environments without GPU access
+    \item Applications where interpretability is prioritized over accuracy
+    \item Scenarios requiring frequent model retraining with limited computational budget
 \end{itemize}
 
 \newpage
@@ -590,10 +590,10 @@ The CNN's superiority is most pronounced in challenging categories with high vis
 Key findings from this study include:
 
 \begin{enumerate}
-	\item The MCNN15 architecture with batch normalization and data augmentation achieves state-of-the-art performance on Fashion-MNIST among comparable CNN designs.
-	\item Both classifiers struggle most with Shirt classification, but the CNN reduces error rates by 48.9\% compared to Random Forest.
-	\item Training time differences are substantial but become less critical when considering inference speed and infrequent retraining needs.
-	\item The CNN demonstrates superior generalization and robustness to variations in garment presentation.
+    \item The MCNN15 architecture with batch normalization and data augmentation achieves state-of-the-art performance on Fashion-MNIST among comparable CNN designs.
+    \item Both classifiers struggle most with Shirt classification, but the CNN reduces error rates by 48.9\% compared to Random Forest.
+    \item Training time differences are substantial but become less critical when considering inference speed and infrequent retraining needs.
+    \item The CNN demonstrates superior generalization and robustness to variations in garment presentation.
 \end{enumerate}
 
 Based on these results, we recommend CNN-based approaches for production fashion classification systems where accuracy is prioritized over training efficiency. The Random Forest classifier remains a viable alternative for resource-constrained environments or applications requiring rapid model development, though with acceptance of reduced classification accuracy.
@@ -612,23 +612,23 @@ Future research directions should explore transfer learning from larger fashion 
 
 \begin{enumerate}
 
-	\item Xiao, H., Rasul, K., \& Vollgraf, R. (2017). Fashion-MNIST: A Novel Image Dataset for Benchmarking Machine Learning Algorithms. \textit{arXiv preprint arXiv:1708.07747}. https://arxiv.org/abs/1708.07747
+\item Xiao, H., Rasul, K., \& Vollgraf, R. (2017). Fashion-MNIST: A Novel Image Dataset for Benchmarking Machine Learning Algorithms. \textit{arXiv preprint arXiv:1708.07747}. https://arxiv.org/abs/1708.07747
 
-	\item TensorFlow. (2024). Basic classification: Classify images of clothing. https://www.tensorflow.org/tutorials/keras/classification [Accessed: 10.12.2025]
+\item TensorFlow. (2024). Basic classification: Classify images of clothing. https://www.tensorflow.org/tutorials/keras/classification [Accessed: 10.12.2025]
 
-	\item Breiman, L. (2001). Random forests. \textit{Machine Learning}, 45(1), 5-32. https://doi.org/10.1023/A:1010933404324
+\item Breiman, L. (2001). Random forests. \textit{Machine Learning}, 45(1), 5-32. https://doi.org/10.1023/A:1010933404324
 
-	\item LeCun, Y., Bottou, L., Bengio, Y., \& Haffner, P. (1998). Gradient-based learning applied to document recognition. \textit{Proceedings of the IEEE}, 86(11), 2278-2324.
+\item LeCun, Y., Bottou, L., Bengio, Y., \& Haffner, P. (1998). Gradient-based learning applied to document recognition. \textit{Proceedings of the IEEE}, 86(11), 2278-2324.
 
-	\item Bhatnagar, S., Ghosal, D., \& Kolekar, M. H. (2017). Image classification using multiple convolutional neural networks on the fashion-mnist dataset. In \textit{2017 International Conference on Intelligent Sustainable Systems (ICISS)} (pp. 597-602). IEEE.
+\item Bhatnagar, S., Ghosal, D., \& Kolekar, M. H. (2017). Image classification using multiple convolutional neural networks on the fashion-mnist dataset. In \textit{2017 International Conference on Intelligent Sustainable Systems (ICISS)} (pp. 597-602). IEEE.
 
-	\item Kingma, D. P., \& Ba, J. (2014). Adam: A Method for Stochastic Optimization. \textit{arXiv preprint arXiv:1412.6980}. https://arxiv.org/abs/1412.6980
+\item Kingma, D. P., \& Ba, J. (2014). Adam: A Method for Stochastic Optimization. \textit{arXiv preprint arXiv:1412.6980}. https://arxiv.org/abs/1412.6980
 
-	\item Ioffe, S., \& Szegedy, C. (2015). Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift. In \textit{International Conference on Machine Learning} (pp. 448-456). PMLR.
+\item Ioffe, S., \& Szegedy, C. (2015). Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift. In \textit{International Conference on Machine Learning} (pp. 448-456). PMLR.
 
-	\item Perez, L., \& Wang, J. (2017). The Effectiveness of Data Augmentation in Image Classification using Deep Learning. \textit{arXiv preprint arXiv:1712.04621}. https://arxiv.org/abs/1712.04621
+\item Perez, L., \& Wang, J. (2017). The Effectiveness of Data Augmentation in Image Classification using Deep Learning. \textit{arXiv preprint arXiv:1712.04621}. https://arxiv.org/abs/1712.04621
 
-	\item Zalando Research. (2017). Fashion-MNIST Benchmarks. https://github.com/zalandoresearch/fashion-mnist
+\item Zalando Research. (2017). Fashion-MNIST Benchmarks. https://github.com/zalandoresearch/fashion-mnist
 
 \end{enumerate}
 
