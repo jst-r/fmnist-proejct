@@ -485,9 +485,6 @@
       \field{year}{2015}
       \field{pages}{406\bibrangedash 412}
       \range{pages}{7}
-      \verb{doi}
-      \verb 10.1109/ICNSC.2015.7295084
-      \endverb
     \endentry
     \entry{simonyan2014}{article}{}{}
       \name{author}{2}{}{%
@@ -1050,9 +1047,6 @@
       \field{year}{2015}
       \field{pages}{406\bibrangedash 412}
       \range{pages}{7}
-      \verb{doi}
-      \verb 10.1109/ICNSC.2015.7295084
-      \endverb
     \endentry
     \entry{simonyan2014}{article}{}{}
       \name{author}{2}{}{%

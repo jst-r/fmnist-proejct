@@ -1,0 +1,7 @@
+\contentsline {figure}{\numberline {1}{\ignorespaces Graphical Abstract: Comparative analysis workflow from Fashion-MNIST dataset through CNN and Random Forest classifiers to performance metrics and production recommendation.}}{1}{}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Representative samples from the Fashion-MNIST dataset showing five examples from each of the 10 fashion categories. The images demonstrate significant intra-class variability (e.g., different shirt styles) and inter-class similarity (e.g., shirts vs. T-shirts), making classification more challenging than handwritten digit recognition.}}{4}{}%
+\contentsline {figure}{\numberline {3}{\ignorespaces MCNN15 architecture diagram showing the three convolutional groups with batch normalization and max pooling, followed by fully connected classifier layers. Each group contains 5 Conv-BN-ReLU blocks with progressive channel expansion.}}{5}{}%
+\contentsline {figure}{\numberline {4}{\ignorespaces CNN training curves over 50 epochs.}}{6}{}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Random Forest: Perfect training performance but significant confusion between similar upper-body garments on test set.}}{7}{}%
+\contentsline {figure}{\numberline {6}{\ignorespaces CNN: Consistent train/test performance with reduced confusion between similar categories.}}{7}{}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Misclassification examples showing both models struggle with upper-body garments, but CNN errors are more visually justifiable.}}{8}{}%

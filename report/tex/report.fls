@@ -338,6 +338,10 @@ INPUT ..\..\plots\cnn\misclassified.png
 INPUT ..\..\plots\random_forest\misclassified.png
 INPUT ..\..\plots\random_forest\misclassified.png
 INPUT ..\..\plots\random_forest\misclassified.png
+INPUT .\report.lof
+INPUT .\report.lof
+INPUT report.lof
+OUTPUT report.lof
 INPUT report.aux
 INPUT report.run.xml
 OUTPUT report.run.xml

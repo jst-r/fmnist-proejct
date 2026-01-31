@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.1.28)  31 JAN 2026 23:46
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.1.28)  31 JAN 2026 23:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1348,7 +1348,17 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
 (Font)              Font shape `TU/lmtt/b/n' tried instead on input line 479.
- [11] [12] (report.aux)
+ [11] [12] (report.lof
+Overfull \hbox (9.50107pt too wide) in paragraph at lines 1--1
+ [][] []\TU/Arial(0)/m/n/10.95 Graphical Abstract: Comparative analysis workflo
+w from Fashion-MNIST dataset through 
+ []
+
+)
+\tf@lof=\write6
+\openout6 = `report.lof'.
+
+ [13] (report.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-29>
@@ -1358,12 +1368,12 @@ Package logreq Info: Writing requests to 'report.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 30212 strings out of 402987
- 626884 string characters out of 5448524
+ 30219 strings out of 402987
+ 626969 string characters out of 5448524
  1771452 words of memory out of 5000000
- 58521 multiletter control sequences out of 15000+600000
+ 58525 multiletter control sequences out of 15000+600000
  634567 words of font info for 81 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  84i,12n,94p,1197b,5050s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on report.xdv (14 pages, 279948 bytes).
+Output written on report.xdv (15 pages, 296700 bytes).

@@ -419,14 +419,14 @@ Figure \ref{fig:misclassified} displays representative misclassified samples for
 
 \begin{figure}[H]
 	\centering
-	\begin{subfigure}{0.48\textwidth}
+	\begin{subfigure}[t]{0.48\textwidth}
 		\centering
 		\includegraphics[width=\textwidth]{../../plots/cnn/misclassified.png}
 		\caption{CNN: Top confusion pairs showing shirts misclassified as T-shirts/tops, coats as shirts, and shirts as pullovers.}
 		\label{fig:misclassified_cnn}
 	\end{subfigure}
 	\hfill
-	\begin{subfigure}{0.48\textwidth}
+	\begin{subfigure}[t]{0.48\textwidth}
 		\centering
 		\includegraphics[width=\textwidth]{../../plots/random_forest/misclassified.png}
 		\caption{Random Forest: Similar patterns but more severe confusion, plus footwear errors (boots vs sneakers).}
@@ -526,5 +526,11 @@ class MCNN15(nn.Module):
             nn.ReLU()
         )
 \end{lstlisting}
+
+\newpage
+\section*{List of Figures}
+\addcontentsline{toc}{section}{List of Figures}
+
+\listoffigures
 
 \end{document}

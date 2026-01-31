@@ -31,3 +31,4 @@
 \contentsline {section}{\numberline {B}Code Implementation}{11}{}%
 \contentsline {subsection}{\numberline {B.1}Random Forest Training}{11}{}%
 \contentsline {subsection}{\numberline {B.2}CNN Training (PyTorch)}{11}{}%
+\contentsline {section}{List of Figures}{13}{}%
