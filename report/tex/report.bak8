@@ -133,7 +133,7 @@ This study evaluates two approaches for Fashion-MNIST classification: (1) a Conv
 
 \subsection{Dataset and Preprocessing}
 
-Images were preprocessed differently for each classifier to accommodate their architectural requirements. For the Random Forest classifier, the 28$\times$28 pixel images were flattened into 784-dimensional feature vectors, treating each pixel as an independent feature. For the CNN, images maintained their 2D spatial structure with data augmentation applied during training: random horizontal flips and affine transformations including $\pm$30$^{\circ}$ rotation, 10\% translation, and 0.9-1.1 scaling factors. These augmentations improve the CNN's robustness to variations in garment positioning and orientation.
+Fashion-MNIST contains 60,000 training and 10,000 test samples (28$\times$28 pixels). For Random Forest, images were flattened to 784-dimensional vectors. For the CNN, images maintained 2D structure with data augmentation (horizontal flip, affine transformations: $\pm$30$^{\circ}$ rotation, 10\% translation, 0.9-1.1 scaling).
 
 \subsection{Random Forest Classifier}
 

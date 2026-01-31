@@ -1,30 +1,35 @@
 \relax 
 \@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {2}Methodology}{1}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Dataset and Preprocessing}{1}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Random Forest Classifier}{1}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}CNN Architecture (MCNN15)}{1}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.4}Training Strategy}{2}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {3}Results}{2}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Overall Performance}{2}{}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Overall Performance Comparison}}{2}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Representative samples from the Fashion-MNIST dataset showing five examples from each of the 10 fashion categories. The images demonstrate significant intra-class variability (e.g., different shirt styles) and inter-class similarity (e.g., shirts vs. T-shirts), making classification more challenging than handwritten digit recognition.}}{2}{}\protected@file@percent }
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
-\newlabel{tab:overall}{{1}{2}{Overall Performance}{table.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Per-Category Performance}{2}{}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Per-Category Precision and Recall}}{2}{}\protected@file@percent }
-\newlabel{tab:percategory}{{2}{2}{Per-Category Performance}{table.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Confusion Matrices}{3}{}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Random Forest confusion matrices showing perfect training performance but significant confusion between similar upper-body garments on test set.}}{3}{}\protected@file@percent }
-\newlabel{fig:cm_rf}{{1}{3}{Confusion Matrices}{figure.1}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces CNN confusion matrices showing consistent performance across train/test with reduced confusion between visually similar categories.}}{3}{}\protected@file@percent }
-\newlabel{fig:cm_cnn}{{2}{3}{Confusion Matrices}{figure.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Category-Specific Analysis}{3}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4}Analysis and Discussion}{4}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Worst Performing Categories}{4}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Production Recommendation}{4}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {5}Conclusion}{4}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{References}{5}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {A}Code Implementation}{6}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {A.1}Random Forest Training}{6}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {A.2}CNN Training (PyTorch)}{6}{}\protected@file@percent }
-\gdef \@abspage@last{9}
+\newlabel{fig:dataset_samples}{{1}{2}{Introduction}{figure.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Methodology}{2}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Dataset and Preprocessing}{2}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Random Forest Classifier}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}CNN Architecture (MCNN15)}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4}Training Strategy}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3}Results}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Overall Performance}{3}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Overall Performance Comparison}}{3}{}\protected@file@percent }
+\newlabel{tab:overall}{{1}{3}{Overall Performance}{table.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}CNN Training Progression}{4}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces CNN training curves over 50 epochs.}}{4}{}\protected@file@percent }
+\newlabel{fig:cnn_training}{{2}{4}{CNN Training Progression}{figure.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Per-Category Performance}{4}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Per-Category Precision and Recall}}{4}{}\protected@file@percent }
+\newlabel{tab:percategory}{{2}{4}{Per-Category Performance}{table.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Confusion Matrices}{5}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Random Forest confusion matrices showing perfect training performance but significant confusion between similar upper-body garments on test set.}}{5}{}\protected@file@percent }
+\newlabel{fig:cm_rf}{{3}{5}{Confusion Matrices}{figure.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces CNN confusion matrices showing consistent performance across train/test with reduced confusion between visually similar categories.}}{5}{}\protected@file@percent }
+\newlabel{fig:cm_cnn}{{4}{5}{Confusion Matrices}{figure.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5}Category-Specific Analysis}{5}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4}Analysis and Discussion}{6}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Worst Performing Categories}{6}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Production Recommendation}{6}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5}Conclusion}{7}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{References}{7}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {A}Code Implementation}{8}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.1}Random Forest Training}{8}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.2}CNN Training (PyTorch)}{8}{}\protected@file@percent }
+\gdef \@abspage@last{11}
