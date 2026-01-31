@@ -1,15 +1,19 @@
 # Report Enhancement TODO
 
+## Completed Tasks
+
+### Graphical Abstract ✅
+
+- **Location:** Page 3, alongside textual abstract
+- **Content:** Horizontal flow diagram showing motivation, method, results, conclusion
+- **Implementation:** TikZ diagram with dataset → models → results → recommendation workflow
+- **Key metrics displayed:**
+  - Dataset: Fashion-MNIST (70K images, 10 classes)
+  - CNN: MCNN15, 15 layers → 93.63% accuracy, 900s training
+  - Random Forest: 100 trees → 87.52% accuracy, 9.45s training
+  - Recommendation: CNN for Production
+
 ## Future Tasks
-
-### Graphical Abstract
-
-- **Location:** Page 1, alongside textual abstract
-- **Content:** Present motivation, method, results, conclusion visually
-- **Options:**
-  - Workflow diagram (input → CNN/RF → predictions)
-  - Results comparison chart
-  - Mini infographic showing key findings
 
 ### Literature Review
 

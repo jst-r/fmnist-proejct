@@ -114,6 +114,45 @@ This study compares Convolutional Neural Network (CNN) and Random Forest classif
 
 \noindent\textbf{Keywords:} Fashion-MNIST, CNN, Random Forest, Image Classification
 
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}[
+			box/.style={rectangle, rounded corners, draw=black!60, very thick, minimum height=1.5cm, text centered, font=\small},
+			dataset/.style={box, fill=blue!10, text width=3.0cm, minimum height=2cm},
+			cnn/.style={box, fill=blue!20, text width=2.5cm},
+			rf/.style={box, fill=green!20, text width=2.5cm},
+			result/.style={box, fill=gray!10, text width=2.8cm},
+			rec/.style={box, fill=blue!30, text width=3.5cm, minimum height=2cm},
+			arrow/.style={->, thick, black!70}
+		]
+
+		% Dataset
+		\node[dataset] (data) at (0,0) {\textbf{Fashion-MNIST}\linebreak 70K images\linebreak 10 classes};
+
+		% Models with more spacing from dataset
+		\node[cnn] (cnn) at (5,1.2) {\textbf{CNN}\linebreak MCNN15\linebreak 15 layers};
+		\node[rf] (rf) at (5,-1.2) {\textbf{Random Forest}\linebreak 100 trees\linebreak max\_depth=100};
+
+		% Results with more spacing
+		\node[result] (acc) at (9.5,1.2) {\textbf{Accuracy}\linebreak 93.63\% (CNN)\linebreak 87.52\% (RF)};
+		\node[result] (time) at (9.5,-1.2) {\textbf{Training Time}\linebreak 900s (CNN)\linebreak 9.45s (RF)};
+
+		% Conclusion
+		\node[rec] (rec) at (13.5,0) {\textbf{Recommendation}\linebreak CNN for Production};
+
+		% Arrows with better spacing
+		\draw[arrow] (data.east) -- ++(0.8,0) |- (cnn.west);
+		\draw[arrow] (data.east) -- ++(0.8,0) |- (rf.west);
+		\draw[arrow] (cnn.east) -- ++(0.6,0) |- (acc.west);
+		\draw[arrow] (rf.east) -- ++(0.6,0) |- (time.west);
+		\draw[arrow] (acc.east) -- ++(0.5,0) |- (rec.west);
+		\draw[arrow] (time.east) -- ++(0.5,0) |- (rec.west);
+
+	\end{tikzpicture}
+	\caption{Graphical Abstract: Comparative analysis workflow from Fashion-MNIST dataset through CNN and Random Forest classifiers to performance metrics and production recommendation.}
+	\label{fig:graphical_abstract}
+\end{figure}
+
 \section{Introduction}
 
 The fashion retail industry, represented by companies like Zalando, requires automated product classification systems to manage extensive inventories and improve customer experience through visual search and recommendation systems. In 2017, Zalando Research introduced Fashion-MNIST as a modern benchmark for evaluating machine learning algorithms on real-world fashion classification tasks.
