@@ -5,11 +5,11 @@ import torch.nn as nn
 from torch.utils.data import DataLoader, Dataset
 from torchvision import datasets, transforms
 
+from src.common.paths import DATA_DIR
+
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 # device = torch.device("cpu")
 current_dir = Path(__file__).parent
-PROJECT_DIR = current_dir.parent
-DATA_DIR = PROJECT_DIR / "data"
 
 
 def make_model(resnet=False, num_classes: int = 10):

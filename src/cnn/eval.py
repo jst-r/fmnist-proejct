@@ -3,12 +3,13 @@ import time
 import numpy as np
 import torch
 
-from shared import PROJECT_DIR, get_loaders, make_model, device
-from common.eval import (
+from src.cnn.shared import get_loaders, make_model, device
+from src.common.eval import (
     print_classification_metrics,
     plot_confusion_matrix,
     plot_misclassified,
 )
+from src.common.paths import PROJECT_DIR
 
 
 print("=" * 60)

@@ -40,7 +40,6 @@ def plot_confusion_matrix(y_true, y_pred, class_names, output_path):
     norm_confusion = confusion / confusion.sum(axis=1, keepdims=True) * 100
     log_confusion = np.log1p(confusion)
 
-    plt.figure(figsize=(10, 8))
     sns.heatmap(
         log_confusion,
         annot=norm_confusion,

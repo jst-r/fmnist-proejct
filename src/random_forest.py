@@ -9,12 +9,14 @@ import torchvision.transforms as transforms
 from sklearn.ensemble import RandomForestClassifier
 from matplotlib import pyplot as plt
 
+from src.common.paths import DATA_DIR
+
 
 # %%
 def load_dataset(train: bool):
     print(f"Loading {'train' if train else 'test'} dataset...")
     dataset_train = torchvision.datasets.FashionMNIST(
-        "./data",
+        DATA_DIR,
         train=train,
         download=True,
         transform=transforms.Compose(
