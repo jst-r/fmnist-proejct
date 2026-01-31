@@ -1,14 +1,14 @@
 \contentsline {section}{\numberline {1}Introduction}{1}{}%
 \contentsline {section}{\numberline {2}Methodology}{2}{}%
 \contentsline {subsection}{\numberline {2.1}Dataset and Preprocessing}{2}{}%
-\contentsline {subsection}{\numberline {2.2}Random Forest Classifier}{3}{}%
+\contentsline {subsection}{\numberline {2.2}Random Forest Classifier}{2}{}%
 \contentsline {subsection}{\numberline {2.3}CNN Architecture (MCNN15)}{3}{}%
 \contentsline {subsection}{\numberline {2.4}Training Strategy}{3}{}%
 \contentsline {section}{\numberline {3}Results}{3}{}%
 \contentsline {subsection}{\numberline {3.1}Overall Performance}{3}{}%
 \contentsline {subsection}{\numberline {3.2}CNN Training Progression}{4}{}%
 \contentsline {subsection}{\numberline {3.3}Per-Category Performance}{4}{}%
-\contentsline {subsection}{\numberline {3.4}Confusion Matrices}{5}{}%
+\contentsline {subsection}{\numberline {3.4}Confusion Matrices}{4}{}%
 \contentsline {subsection}{\numberline {3.5}Category-Specific Analysis}{5}{}%
 \contentsline {section}{\numberline {4}Analysis and Discussion}{6}{}%
 \contentsline {subsection}{\numberline {4.1}Worst Performing Categories}{6}{}%

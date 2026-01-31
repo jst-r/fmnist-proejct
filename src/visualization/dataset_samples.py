@@ -35,15 +35,15 @@ def plot_dataset_samples(output_path, n_samples=5):
     # Get samples
     samples_by_class = get_first_n_samples_per_class(dataset, n_samples)
 
-    # Create figure: 10 rows (classes) × n_samples columns
-    fig, axes = plt.subplots(10, n_samples, figsize=(n_samples * 1.2, 10 * 1.2))
+    # Create figure: n_samples rows × 10 columns (classes) - transposed layout
+    fig, axes = plt.subplots(n_samples, 10, figsize=(10 * 1.0, n_samples * 1.0))
     fig.suptitle(
         "Fashion-MNIST Dataset Samples (First 5 per Class)", fontsize=14, y=0.995
     )
 
-    for class_idx in range(10):
-        for sample_idx in range(n_samples):
-            ax = axes[class_idx, sample_idx]
+    for sample_idx in range(n_samples):
+        for class_idx in range(10):
+            ax = axes[sample_idx, class_idx]
             img = samples_by_class[class_idx][sample_idx]
 
             # Convert tensor to numpy and squeeze channel dimension
@@ -52,21 +52,21 @@ def plot_dataset_samples(output_path, n_samples=5):
             ax.imshow(img_np, cmap="gray")
             ax.axis("off")
 
-            # Add class label only on first column
+            # Add class label only on first row
             if sample_idx == 0:
                 ax.text(
-                    -0.5,
                     0.5,
+                    1.02,
                     CLASS_NAMES[class_idx],
-                    ha="right",
-                    va="center",
+                    ha="center",
+                    va="bottom",
                     fontsize=10,
                     fontweight="bold",
                     transform=ax.transAxes,
                 )
 
     plt.tight_layout()
-    plt.subplots_adjust(left=0.15, top=0.98)
+    plt.subplots_adjust(top=0.88, bottom=0.02, left=0.02, right=0.98)
     plt.savefig(output_path, bbox_inches="tight", dpi=150)
     plt.close()
 

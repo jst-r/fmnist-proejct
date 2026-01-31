@@ -1,12 +1,14 @@
 # Fdb version 4
-["xdvipdfmx"] 1769878648.8221 "report.xdv" "report.pdf" "report" 1769878649.29812 0
-  "report.xdv" 1769878648 140784 6ea6a5b8a81bbfb6aec0a305d7fa9b60 "xelatex"
+["xdvipdfmx"] 1769889877.52783 "report.xdv" "report.pdf" "report" 1769889878.21376 0
+  "report.xdv" 1769889877 182780 dabd5c51058e4cfec0b854e1f927dba7 "xelatex"
   (generated)
   "report.pdf"
   (rewritten before read)
-["xelatex"] 1769878647.47367 "c:/Users/Admin/Documents/code/university/fmnist-proejct/report/tex/report.tex" "report.xdv" "report" 1769878649.29483 0
+["xelatex"] 1769889876.11408 "report.tex" "report.xdv" "report" 1769889878.21052 0
   "../../plots/cnn/confusion_test.png" 1769877795 48396 3d4bdc779a5518f65ddc3f84ecb97083 ""
   "../../plots/cnn/confusion_train.png" 1769877794 51372 567ee160a85e679d8ca62e4dc6594aba ""
+  "../../plots/cnn/training.png" 1769849983 34552 c809575d9ee70b2e28bbd40175eac4a2 ""
+  "../../plots/dataset/samples.png" 1769889871 84655 50765ef24b71b7b72a87003ae3d1188a ""
   "../../plots/random_forest/confusion_test.png" 1769877728 52204 be8cecb361a9bfe16cf8854b823aa442 ""
   "../../plots/random_forest/confusion_train.png" 1769877727 28173 9cb33272454dc126e3d4502bebfa56c8 ""
   "C:/Users/Admin/AppData/Local/MiKTeX/miktex/data/le/xetex/xelatex.fmt" 1769586033 27176672 1764da98a81fbc07b0d35a95cf8deaf2 ""
@@ -124,6 +126,7 @@
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/tex/latex/microtype/microtype.cfg" 1752015111 27628 65e257a6863987c0e5097054c917d02d ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/tex/latex/microtype/microtype.sty" 1752015111 102775 cc4629d7100508b1ba679322aef9b545 ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/tex/latex/microtype/mt-cmr.cfg" 1752015111 22906 b0be544692bb405a84d147a96af5d777 ""
+  "C:/Users/Admin/AppData/Local/Programs/MiKTeX/tex/latex/multirow/multirow.sty" 1731767677 6696 886c9f3087d0b973ed2c19aa79cb3023 ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/tex/latex/parskip/parskip.sty" 1615976160 4288 94714aa7f535440f33181fec52a31963 ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/tex/latex/pgf/basiclayer/pgf.sty" 1756451144 1090 bae35ef70b3168089ef166db3e66f5b2 ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/tex/latex/pgf/basiclayer/pgfcore.sty" 1756451144 373 00b204b1d7d095b892ad31a7494b0373 ""
@@ -140,10 +143,9 @@
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/tex/latex/titling/titling.sty" 1252048308 7358 95ac619994bd30d405a74f3eca431c84 ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/tex/latex/tools/array.sty" 1761901070 15651 9d7c62df82cb29a555c00550babfe364 ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
-  "c:/Users/Admin/Documents/code/university/fmnist-proejct/report/tex/report.tex" 1769878645 17532 aee1e1fc13e29da445afe92a126e4f20 ""
-  "report.aux" 1769878648 3185 0eab6883f7fd0fe96b9e12175be304c7 "xelatex"
-  "report.tex" 1769878645 17532 aee1e1fc13e29da445afe92a126e4f20 ""
-  "report.toc" 1769878648 1304 a0a7971b2506ea1260cfcc01b120d0d0 "xelatex"
+  "report.aux" 1769889877 4019 16be58aea3f5e916cba65ecdc82d3584 "xelatex"
+  "report.tex" 1769889721 23668 16c4d0a577152abf19e00261e39e9d24 ""
+  "report.toc" 1769889877 1380 70249f7cc42dde30da14791805fcfe83 "xelatex"
   (generated)
   "report.aux"
   "report.log"

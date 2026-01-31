@@ -1,6 +1,6 @@
 INFO:  latexindent.pl version 3.24.7, 2025-08-15, a script to indent .tex files
        latexindent.pl lives here: C:/Users/Admin/AppData/Local/Programs/MiKTeX/scripts/latexindent/
-       Sat Jan 31 20:43:28 2026
+       Sat Jan 31 21:02:01 2026
        Filename: C:\Users\Admin\Documents\code\university\fmnist-proejct\report\tex\report.tex
 INFO:  Processing switches:
        -s|--silent: Silent mode active (you have used either -s or --silent)
@@ -32,7 +32,8 @@ INFO:  Backup procedure (-w flag active):
        C:\Users\Admin\Documents\code\university\fmnist-proejct\report\tex\report.bak6 already exists, incrementing by 1 (see maxNumberOfBackUps)
        C:\Users\Admin\Documents\code\university\fmnist-proejct\report\tex\report.bak7 already exists, incrementing by 1 (see maxNumberOfBackUps)
        C:\Users\Admin\Documents\code\university\fmnist-proejct\report\tex\report.bak8 already exists, incrementing by 1 (see maxNumberOfBackUps)
-       Backing up C:\Users\Admin\Documents\code\university\fmnist-proejct\report\tex\report.tex to C:\Users\Admin\Documents\code\university\fmnist-proejct\report\tex\report.bak9...
+       C:\Users\Admin\Documents\code\university\fmnist-proejct\report\tex\report.bak9 already exists, incrementing by 1 (see maxNumberOfBackUps)
+       Backing up C:\Users\Admin\Documents\code\university\fmnist-proejct\report\tex\report.tex to C:\Users\Admin\Documents\code\university\fmnist-proejct\report\tex\report.bak10...
        C:\Users\Admin\Documents\code\university\fmnist-proejct\report\tex\report.tex will be overwritten after indentation
 INFO:  Phase 1: searching for objects
 INFO:  Phase 2: finding surrounding indentation

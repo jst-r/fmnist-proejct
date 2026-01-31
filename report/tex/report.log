@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.1.28)  31 JAN 2026 20:43
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.1.28)  31 JAN 2026 21:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -952,20 +952,21 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 [2]
 File: ../../plots/dataset/samples.png Graphic file (type bmp)
 <../../plots/dataset/samples.png>
- [1] [2] [3]
+ [1] [2]
 Underfull \hbox (badness 1590) in paragraph at lines 189--190
 \TU/Arial(0)/m/n/10.95 out training indicates minimal overfitting and
  []
 
 File: ../../plots/cnn/training.png Graphic file (type bmp)
 <../../plots/cnn/training.png>
+[3]
 File: ../../plots/random_forest/confusion_train.png Graphic file (type bmp)
 <../../plots/random_forest/confusion_train.png>
 LaTeX Font Info:    Font shape `TU/Arial(0)/m/n' will be
 (Font)              scaled to size 10.0pt on input line 242.
 File: ../../plots/random_forest/confusion_test.png Graphic file (type bmp)
 <../../plots/random_forest/confusion_test.png>
-[4]
+ [4]
 File: ../../plots/cnn/confusion_train.png Graphic file (type bmp)
 <../../plots/cnn/confusion_train.png>
 File: ../../plots/cnn/confusion_test.png Graphic file (type bmp)
@@ -999,4 +1000,4 @@ Here is how much of TeX's memory you used:
  1348 hyphenation exceptions out of 8191
  84i,12n,94p,1197b,1141s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on report.pdf (11 pages).
+Output written on report.xdv (11 pages, 182780 bytes).
