@@ -1,0 +1,50 @@
+INFO:  latexindent.pl version 3.24.7, 2025-08-15, a script to indent .tex files
+       latexindent.pl lives here: C:/Users/Admin/AppData/Local/Programs/MiKTeX/scripts/latexindent/
+       Sat Jan 31 18:28:25 2026
+       Filename: C:\Users\Admin\Documents\code\university\fmnist-proejct\report\tex\report.tex
+INFO:  Processing switches:
+       -s|--silent: Silent mode active (you have used either -s or --silent)
+       -w|--overwrite: Overwrite mode active, will make a back up before overwriting
+INFO:  Directory for backup files and log file indent.log:
+       C:\Users\Admin\Documents\code\university\fmnist-proejct\report\tex
+INFO:  Perl modules are being loaded from the following directories:
+       C:/Strawberry/perl/lib/FindBin.pm
+       C:/Strawberry/perl/vendor/lib/YAML/Tiny.pm
+       C:/Strawberry/perl/lib/File/Copy.pm
+       C:/Strawberry/perl/lib/File/Basename.pm
+       C:/Strawberry/perl/lib/Getopt/Long.pm
+       C:/Strawberry/perl/vendor/lib/File/HomeDir.pm
+INFO:  LatexIndent perl modules are being loaded from, for example:
+       C:/Users/Admin/AppData/Local/Programs/MiKTeX/scripts/latexindent/LatexIndent/Document.pm
+INFO:  YAML settings read: defaultSettings.yaml
+       Reading defaultSettings.yaml from C:/Users/Admin/AppData/Local/Programs/MiKTeX/scripts/latexindent/defaultSettings.yaml
+INFO:  YAML reading settings
+       Home directory is C:\Users\Admin
+       latexindent.pl didn't find indentconfig.yaml or .indentconfig.yaml
+       see all possible locations: https://latexindentpl.readthedocs.io/en/latest/sec-appendices.html#indentconfig-options)
+INFO:  Backup procedure (-w flag active):
+       C:\Users\Admin\Documents\code\university\fmnist-proejct\report\tex\report.bak0 already exists, incrementing by 1 (see maxNumberOfBackUps)
+       C:\Users\Admin\Documents\code\university\fmnist-proejct\report\tex\report.bak1 already exists, incrementing by 1 (see maxNumberOfBackUps)
+       C:\Users\Admin\Documents\code\university\fmnist-proejct\report\tex\report.bak2 already exists, incrementing by 1 (see maxNumberOfBackUps)
+       C:\Users\Admin\Documents\code\university\fmnist-proejct\report\tex\report.bak3 already exists, incrementing by 1 (see maxNumberOfBackUps)
+       C:\Users\Admin\Documents\code\university\fmnist-proejct\report\tex\report.bak4 already exists, incrementing by 1 (see maxNumberOfBackUps)
+       C:\Users\Admin\Documents\code\university\fmnist-proejct\report\tex\report.bak5 already exists, incrementing by 1 (see maxNumberOfBackUps)
+       C:\Users\Admin\Documents\code\university\fmnist-proejct\report\tex\report.bak6 already exists, incrementing by 1 (see maxNumberOfBackUps)
+       C:\Users\Admin\Documents\code\university\fmnist-proejct\report\tex\report.bak7 already exists, incrementing by 1 (see maxNumberOfBackUps)
+       C:\Users\Admin\Documents\code\university\fmnist-proejct\report\tex\report.bak8 already exists, incrementing by 1 (see maxNumberOfBackUps)
+       C:\Users\Admin\Documents\code\university\fmnist-proejct\report\tex\report.bak9 already exists, incrementing by 1 (see maxNumberOfBackUps)
+       C:\Users\Admin\Documents\code\university\fmnist-proejct\report\tex\report.bak10 already exists, incrementing by 1 (see maxNumberOfBackUps)
+       C:\Users\Admin\Documents\code\university\fmnist-proejct\report\tex\report.bak11 already exists, incrementing by 1 (see maxNumberOfBackUps)
+       C:\Users\Admin\Documents\code\university\fmnist-proejct\report\tex\report.bak12 already exists, incrementing by 1 (see maxNumberOfBackUps)
+       C:\Users\Admin\Documents\code\university\fmnist-proejct\report\tex\report.bak13 already exists, incrementing by 1 (see maxNumberOfBackUps)
+       Backing up C:\Users\Admin\Documents\code\university\fmnist-proejct\report\tex\report.tex to C:\Users\Admin\Documents\code\university\fmnist-proejct\report\tex\report.bak14...
+       C:\Users\Admin\Documents\code\university\fmnist-proejct\report\tex\report.tex will be overwritten after indentation
+INFO:  Phase 1: searching for objects
+INFO:  Phase 2: finding surrounding indentation
+INFO:  Phase 3: indenting objects
+INFO:  Phase 4: final indentation check
+INFO:  Output routine:
+       Overwriting file C:\Users\Admin\Documents\code\university\fmnist-proejct\report\tex\report.tex
+       --------------
+INFO:  Please direct all communication/issues to:
+        https://github.com/cmhughes/latexindent.pl

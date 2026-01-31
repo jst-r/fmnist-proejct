@@ -32,6 +32,7 @@
 \usepackage{graphicx}
 \usepackage{booktabs}
 \usepackage{array}
+\usepackage{multirow}
 \usepackage{float}
 \usepackage{amsmath}
 \usepackage{listings}
@@ -145,6 +146,8 @@ Batch normalization (Ioffe \& Szegedy, 2015) follows each convolution for traini
 
 \textbf{CNN:} Trained with Adam optimizer (Kingma \& Ba, 2014), learning rate=1e-3, weight decay=1e-5, batch size=128, for 50 epochs. The training set was split 50,000/10,000 for train/validation. Model selection used validation accuracy (best at epoch 40 with 93.74\%), with final test evaluation performed once on the held-out test set. Training time: approximately 900 seconds on GPU.
 
+The training procedure followed the methodology specified by Bhatnagar et al. (2017) in the MCNN15 paper to ensure reproducible results and fair comparison with the reported baseline performance.
+
 \section{Results}
 
 \subsection{Overall Performance}
@@ -169,6 +172,21 @@ Table \ref{tab:overall} presents comprehensive performance metrics for both clas
 
 The CNN achieved 6.11 percentage points higher test accuracy, representing a 48.8\% error reduction. Random Forest shows perfect training accuracy (100\%) but 12.48\% test error, indicating overfitting. The CNN demonstrates better generalization with only 1.84\% gap between train and test accuracy.
 
+\subsection{CNN Training Progression}
+
+\begin{minipage}[t]{0.48\textwidth}
+	Figure \ref{fig:cnn_training} illustrates the CNN's accuracy progression across 50 training epochs. Starting from 74.5\% accuracy in epoch 1, training accuracy (blue) rises steeply to 91.8\% by epoch 10 and converges to 93.7\% by epoch 50. Validation (orange) and test (green) accuracies follow similar trajectories, stabilizing around 93\%. Validation accuracy peaks at epoch 41 with 93.74\%. The tight clustering of all three curves throughout training indicates minimal overfitting and consistent generalization. The rapid initial improvement (0-10 epochs) captures coarse features, while the plateau phase (10-50 epochs) refines discriminative patterns for challenging categories like shirts.
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\textwidth}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=\textwidth]{../../plots/cnn/training.png}
+		\caption{CNN training curves over 50 epochs.}
+		\label{fig:cnn_training}
+	\end{figure}
+\end{minipage}
+
 \subsection{Per-Category Performance}
 
 Table \ref{tab:percategory} details precision and recall by category.
@@ -180,18 +198,22 @@ Table \ref{tab:percategory} details precision and recall by category.
 	\resizebox{\textwidth}{!}{%
 		\begin{tabular}{|l|c|c|c|c|c|c|c|c|}
 			\hline
-			\textbf{Category} & \textbf{RF Train P} & \textbf{RF Train R} & \textbf{RF Test P} & \textbf{RF Test R} & \textbf{CNN Train P} & \textbf{CNN Train R} & \textbf{CNN Test P} & \textbf{CNN Test R} \\
+			                                    & \multicolumn{4}{c|}{\textbf{Random forest}} & \multicolumn{4}{c|}{\textbf{Convolutional Neural Network}}                                                                                                                                                    \\
+			\cline{2-9}
+			\multirow{-2}{*}{\textbf{Category}} & \multicolumn{2}{c|}{\textbf{Precision}}     & \multicolumn{2}{c|}{\textbf{Recall}}                       & \multicolumn{2}{c|}{\textbf{Precision}} & \multicolumn{2}{c|}{\textbf{Recall}}                                                                   \\
+			\cline{2-9}
+			                                    & \textbf{Train}                              & \textbf{Test}                                              & \textbf{Train}                          & \textbf{Test}                        & \textbf{Train} & \textbf{Test} & \textbf{Train} & \textbf{Test} \\
 			\hline
-			T-shirt/top       & 99.8\%              & 99.7\%              & 81.3\%             & 86.3\%             & 95.1\%               & 94.8\%               & 86.7\%              & 89.2\%              \\
-			Trouser           & 100.0\%             & 100.0\%             & 99.3\%             & 95.9\%             & 99.8\%               & 99.6\%               & 99.2\%              & 98.5\%              \\
-			Pullover          & 99.9\%              & 99.8\%              & 76.6\%             & 79.5\%             & 96.8\%               & 96.2\%               & 90.5\%              & 89.3\%              \\
-			Dress             & 99.9\%              & 99.9\%              & 87.3\%             & 90.9\%             & 96.5\%               & 96.8\%               & 91.8\%              & 93.5\%              \\
-			Coat              & 99.9\%              & 99.8\%              & 76.1\%             & 82.0\%             & 95.2\%               & 94.8\%               & 87.5\%              & 91.4\%              \\
-			Sandal            & 100.0\%             & 100.0\%             & 98.1\%             & 95.5\%             & 99.4\%               & 99.1\%               & 98.8\%              & 98.6\%              \\
-			Shirt             & 99.8\%              & 99.6\%              & 72.4\%             & 57.4\%             & 88.2\%               & 85.3\%               & 82.0\%              & 77.5\%              \\
-			Sneaker           & 100.0\%             & 100.0\%             & 92.5\%             & 95.9\%             & 98.1\%               & 98.4\%               & 96.1\%              & 98.2\%              \\
-			Bag               & 100.0\%             & 100.0\%             & 95.6\%             & 97.3\%             & 99.2\%               & 99.0\%               & 98.8\%              & 98.7\%              \\
-			Ankle boot        & 100.0\%             & 100.0\%             & 95.2\%             & 94.5\%             & 98.9\%               & 98.5\%               & 98.3\%              & 96.8\%              \\
+			T-shirt/top                         & 99.8\%                                      & 81.3\%                                                     & 99.7\%                                  & 86.3\%                               & 95.1\%         & 86.7\%        & 94.8\%         & 89.2\%        \\
+			Trouser                             & 100.0\%                                     & 99.3\%                                                     & 100.0\%                                 & 95.9\%                               & 99.8\%         & 99.2\%        & 99.6\%         & 98.5\%        \\
+			Pullover                            & 99.9\%                                      & 76.6\%                                                     & 99.8\%                                  & 79.5\%                               & 96.8\%         & 90.5\%        & 96.2\%         & 89.3\%        \\
+			Dress                               & 99.9\%                                      & 87.3\%                                                     & 99.9\%                                  & 90.9\%                               & 96.5\%         & 91.8\%        & 96.8\%         & 93.5\%        \\
+			Coat                                & 99.9\%                                      & 76.1\%                                                     & 99.8\%                                  & 82.0\%                               & 95.2\%         & 87.5\%        & 94.8\%         & 91.4\%        \\
+			Sandal                              & 100.0\%                                     & 98.1\%                                                     & 100.0\%                                 & 95.5\%                               & 99.4\%         & 98.8\%        & 99.1\%         & 98.6\%        \\
+			Shirt                               & 99.8\%                                      & 72.4\%                                                     & 99.6\%                                  & 57.4\%                               & 88.2\%         & 82.0\%        & 85.3\%         & 77.5\%        \\
+			Sneaker                             & 100.0\%                                     & 92.5\%                                                     & 100.0\%                                 & 95.9\%                               & 98.1\%         & 96.1\%        & 98.4\%         & 98.2\%        \\
+			Bag                                 & 100.0\%                                     & 95.6\%                                                     & 100.0\%                                 & 97.3\%                               & 99.2\%         & 98.8\%        & 99.0\%         & 98.7\%        \\
+			Ankle boot                          & 100.0\%                                     & 95.2\%                                                     & 100.0\%                                 & 94.5\%                               & 98.9\%         & 98.3\%        & 98.5\%         & 96.8\%        \\
 			\hline
 		\end{tabular}%
 	}
@@ -270,6 +292,8 @@ We recommend the CNN approach for production fashion classification systems base
 	\item \textbf{Generalization:} Better train-test gap (1.84\% vs 12.48\%) indicates robustness to variations
 	\item \textbf{Training Frequency:} Infrequent retraining (weekly/monthly) makes 900s training time acceptable
 \end{enumerate}
+
+\textbf{Resource Considerations:} The CNN model file size (10MB) is significantly smaller than the Random Forest model (123MB), offering storage and deployment advantages. However, inference time for the CNN is 2.03s versus 0.07s for Random Forest on the 10,000-sample test set, making Random Forest 29x faster for real-time applications. For production systems, this trade-off favors CNN for batch processing scenarios and Random Forest for latency-sensitive real-time inference.
 
 Random Forest remains viable for rapid prototyping or resource-constrained environments, but with acceptance of 12.48\% error rate versus 6.37\% for CNN.
 
