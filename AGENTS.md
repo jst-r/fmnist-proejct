@@ -36,7 +36,8 @@
 │   └── dataset/         # Dataset sample visualizations
 ├── report/
 │   ├── tex/             # LaTeX source files
-│   │   └── report.tex   # Main report file
+│   │   ├── report.tex   # Main report file
+│   │   └── references.bib  # Bibliography database (biblatex)
 │   ├── task.md          # Assignment requirements
 │   └── todo.md          # Agent task tracking
 └── AGENTS.md            # This file
@@ -52,14 +53,19 @@
 ### Compilation
 ```bash
 cd report/tex
-xelatex report.tex    # Run twice to resolve references
-xelatex report.tex
+xelatex report.tex    # First pass
+biber report          # Process bibliography (required for citations)
+xelatex report.tex    # Second pass to resolve citations
+xelatex report.tex    # Final pass for stability
 ```
+
+**Note:** The report now uses `biblatex` with `biber` backend for APA-style citations. The `biber` step is required to process the bibliography database.
 
 ### Key Packages
 - Document class: `article` with a4paper, 11pt
 - Font: Arial (requires XeLaTeX)
-- Required packages: `fontspec`, `graphicx`, `float`, `subcaption`, `booktabs`, `multirow`
+- Bibliography: `biblatex` with APA style (requires `biber`)
+- Required packages: `fontspec`, `graphicx`, `float`, `subcaption`, `booktabs`, `multirow`, `biblatex`
 
 ## Plot File Locations
 All plots are referenced from `report/tex/report.tex` using relative paths:
@@ -94,12 +100,32 @@ CLASS_NAMES = [
 ]
 ```
 
+## Bibliography Management
+
+### Citation System
+- **Backend:** `biber` (modern replacement for BibTeX)
+- **Style:** APA 7th edition (`style=apa`)
+- **Database:** `references.bib` in `report/tex/`
+
+### Citation Commands
+Use these LaTeX commands instead of hardcoding citations:
+- **Parenthetical:** `\parencite{xiao2017}` → (Xiao et al., 2017)
+- **Narrative:** `\textcite{xiao2017}` → Xiao et al. (2017)
+- **Multiple:** `\parencite{xiao2017,bhatnagar2017}` → (Xiao et al., 2017; Bhatnagar et al., 2017)
+
+### Adding New References
+1. Add BibTeX entry to `report/tex/references.bib`
+2. Use entry types: `@article`, `@inproceedings`, `@online`, `@book`
+3. Run `biber report` after adding new citations
+4. Recompile with `xelatex` (3 passes for stability)
+
 ## Common Issues
 1. **Page count:** Currently ~6.5 pages body content (target: 7-10)
 2. **Missing elements:**
    - Graphical abstract (Page 1)
    - Literature review (Page 2)
 3. **Sample image orientation:** Dataset samples figure may need 90-degree rotation for better layout
+4. **Citation errors:** If citations show as "[xiao2017]", run `biber report` and recompile
 
 ## Task Requirements Reference
 See `report/task.md` for full assignment details including:

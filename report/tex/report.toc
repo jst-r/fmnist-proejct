@@ -1,20 +1,26 @@
 \contentsline {section}{\numberline {1}Introduction}{1}{}%
-\contentsline {section}{\numberline {2}Methodology}{2}{}%
-\contentsline {subsection}{\numberline {2.1}Dataset and Preprocessing}{2}{}%
-\contentsline {subsection}{\numberline {2.2}Random Forest Classifier}{2}{}%
-\contentsline {subsection}{\numberline {2.3}CNN Architecture (MCNN15)}{3}{}%
-\contentsline {subsection}{\numberline {2.4}Training Strategy}{3}{}%
-\contentsline {section}{\numberline {3}Results}{3}{}%
-\contentsline {subsection}{\numberline {3.1}Overall Performance}{3}{}%
-\contentsline {subsection}{\numberline {3.2}CNN Training Progression}{4}{}%
-\contentsline {subsection}{\numberline {3.3}Per-Category Performance}{4}{}%
-\contentsline {subsection}{\numberline {3.4}Confusion Matrices}{4}{}%
-\contentsline {subsection}{\numberline {3.5}Category-Specific Analysis}{5}{}%
-\contentsline {section}{\numberline {4}Analysis and Discussion}{6}{}%
-\contentsline {subsection}{\numberline {4.1}Worst Performing Categories}{6}{}%
-\contentsline {subsection}{\numberline {4.2}Production Recommendation}{6}{}%
-\contentsline {section}{\numberline {5}Conclusion}{7}{}%
-\contentsline {section}{References}{7}{}%
-\contentsline {section}{\numberline {A}Code Implementation}{8}{}%
-\contentsline {subsection}{\numberline {A.1}Random Forest Training}{8}{}%
-\contentsline {subsection}{\numberline {A.2}CNN Training (PyTorch)}{8}{}%
+\contentsline {section}{\numberline {2}Literature Review}{2}{}%
+\contentsline {subsection}{\numberline {2.1}Evolution of CNN Architectures for Image Classification}{2}{}%
+\contentsline {subsection}{\numberline {2.2}Fashion-MNIST Benchmarking Studies}{3}{}%
+\contentsline {subsection}{\numberline {2.3}CNN vs Traditional Machine Learning for Image Classification}{3}{}%
+\contentsline {subsection}{\numberline {2.4}Selection of MCNN15 Architecture}{4}{}%
+\contentsline {section}{\numberline {3}Methodology}{4}{}%
+\contentsline {subsection}{\numberline {3.1}Dataset and Preprocessing}{4}{}%
+\contentsline {subsection}{\numberline {3.2}Random Forest Classifier}{4}{}%
+\contentsline {subsection}{\numberline {3.3}CNN Architecture (MCNN15)}{4}{}%
+\contentsline {subsection}{\numberline {3.4}Training Strategy}{5}{}%
+\contentsline {section}{\numberline {4}Results}{5}{}%
+\contentsline {subsection}{\numberline {4.1}Overall Performance}{5}{}%
+\contentsline {subsection}{\numberline {4.2}CNN Training Progression}{6}{}%
+\contentsline {subsection}{\numberline {4.3}Per-Category Performance}{6}{}%
+\contentsline {section}{\numberline {5}Analysis and Discussion}{6}{}%
+\contentsline {subsection}{\numberline {5.1}Confusion Matrices}{6}{}%
+\contentsline {subsection}{\numberline {5.2}Misclassification Analysis}{7}{}%
+\contentsline {subsection}{\numberline {5.3}Category-Specific Analysis}{9}{}%
+\contentsline {subsection}{\numberline {5.4}Worst Performing Categories}{10}{}%
+\contentsline {subsection}{\numberline {5.5}Production Recommendation}{10}{}%
+\contentsline {section}{\numberline {6}Conclusion}{10}{}%
+\contentsline {section}{References}{11}{}%
+\contentsline {section}{\numberline {A}Code Implementation}{12}{}%
+\contentsline {subsection}{\numberline {A.1}Random Forest Training}{12}{}%
+\contentsline {subsection}{\numberline {A.2}CNN Training (PyTorch)}{12}{}%
