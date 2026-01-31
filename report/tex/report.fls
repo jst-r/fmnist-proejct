@@ -334,6 +334,8 @@ INPUT ..\..\plots\cnn\confusion_test.png
 INPUT ..\..\plots\cnn\misclassified.png
 INPUT ..\..\plots\cnn\misclassified.png
 INPUT ..\..\plots\cnn\misclassified.png
+INPUT C:\Users\Admin\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
+INPUT C:\Users\Admin\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
 INPUT ..\..\plots\random_forest\misclassified.png
 INPUT ..\..\plots\random_forest\misclassified.png
 INPUT ..\..\plots\random_forest\misclassified.png

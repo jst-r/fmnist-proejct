@@ -306,7 +306,7 @@ Random Forest training was performed as a single-pass batch learning operation o
 
 \subsubsection{CNN Training}
 
-The CNN was trained using the Adam optimizer \parencite{kingma2014} with cross-entropy loss (\texttt{nn.CrossEntropyLoss}). Hyperparameters included: learning rate=1e-3, weight decay=1e-5, batch size=128. Training proceeded for a fixed 50 epochs.
+The CNN was trained using the Adam optimizer \parencite{kingma2014} with cross-entropy loss \parencite{goodfellow2016}. Hyperparameters included: learning rate=1e-3, weight decay=1e-5, batch size=128. Training proceeded for a fixed 50 epochs.
 
 The training set was split 50,000/10,000 for training and validation. Data augmentation was applied during training: random horizontal flips and affine transformations ($\pm$30$^{\circ}$ rotation, 10\% translation, 0.9-1.1 scaling). No augmentation was applied during validation or testing.
 
@@ -427,20 +427,25 @@ Figures \ref{fig:cm_rf} and \ref{fig:cm_cnn} present confusion matrices for both
 
 \subsection{Misclassification Analysis}
 
-Figures \ref{fig:misclassified_cnn} and \ref{fig:misclassified_rf} display representative misclassified samples for both classifiers, revealing specific patterns of confusion between visually similar categories.
+Figure \ref{fig:misclassified} displays representative misclassified samples for both classifiers, revealing specific patterns of confusion between visually similar categories.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.95\textwidth]{../../plots/cnn/misclassified.png}
-	\caption{CNN misclassification examples showing the top 9 confusion pairs. The most frequent errors involve shirts misclassified as T-shirts/tops (row 1), coats misclassified as shirts (row 2), and shirts misclassified as pullovers (row 3). These patterns reflect genuine visual ambiguity in silhouette, neckline, and fabric texture at 28$\times$28 resolution.}
-	\label{fig:misclassified_cnn}
-\end{figure}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.95\textwidth]{../../plots/random_forest/misclassified.png}
-	\caption{Random Forest misclassification examples showing the top 9 confusion pairs. Similar patterns emerge with shirts misclassified as T-shirts/tops (row 1) and pullovers misclassified as coats (row 2), but with notably more severe confusion. The Random Forest additionally confuses ankle boots with sneakers (row 9), which the CNN correctly distinguishes.}
-	\label{fig:misclassified_rf}
+	\begin{subfigure}{0.48\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{../../plots/cnn/misclassified.png}
+		\caption{CNN misclassification examples showing the top 9 confusion pairs. The most frequent errors involve shirts misclassified as T-shirts/tops, coats misclassified as shirts, and shirts misclassified as pullovers. These patterns reflect genuine visual ambiguity in silhouette, neckline, and fabric texture at 28$\times$28 resolution.}
+		\label{fig:misclassified_cnn}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}{0.48\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{../../plots/random_forest/misclassified.png}
+		\caption{Random Forest misclassification examples showing the top 9 confusion pairs. Similar patterns emerge with shirts misclassified as T-shirts/tops and pullovers misclassified as coats, but with notably more severe confusion. The Random Forest additionally confuses ankle boots with sneakers, which the CNN correctly distinguishes.}
+		\label{fig:misclassified_rf}
+	\end{subfigure}
+	\caption{Misclassification examples for both classifiers showing representative error patterns. Both models struggle most with upper-body garments, but the CNN exhibits more visually justifiable errors.}
+	\label{fig:misclassified}
 \end{figure}
 
 The misclassification patterns reveal several key insights. Both classifiers struggle most with upper-body garment categories, particularly shirts versus T-shirts/tops and coats versus pullovers. This aligns with the per-category precision results showing these as the most challenging classes. The CNN's misclassifications appear more visually justifiable---many misclassified shirts genuinely resemble T-shirts in silhouette when color cues are removed. In contrast, Random Forest exhibits more erratic confusion, including footwear misclassifications that the CNN avoids. The CNN's superior ability to capture fine-grained features like collar shape, button patterns, and fabric texture explains its 6.11 percentage point accuracy advantage despite encountering similar ambiguous samples.
