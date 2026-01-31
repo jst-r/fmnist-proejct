@@ -111,45 +111,19 @@ This study compares Convolutional Neural Network (CNN) and Random Forest classif
 
 \noindent\textbf{Keywords:} Fashion-MNIST, CNN, Random Forest, Image Classification
 
-\subsection*{Graphical Abstract}
+\subsection*{Key Findings}
 
-\begin{figure}[H]
-	\centering
-	\begin{tikzpicture}[scale=0.8, transform shape]
-		% Input
-		\node[draw, rectangle, fill=gray!20, minimum width=2cm, minimum height=2cm] (input) at (0,0) {28$\times$28\\Grayscale};
+\textbf{Research Question:} Which classifier provides better accuracy for Fashion-MNIST fashion product classification?
 
-		% CNN Pipeline
-		\node[draw, rectangle, fill=blue!20, minimum width=2.5cm, minimum height=1cm] (cnn1) at (3,1.5) {Conv Layers};
-		\node[draw, rectangle, fill=blue!20, minimum width=2.5cm, minimum height=1cm] (cnn2) at (3,0) {Batch Norm};
-		\node[draw, rectangle, fill=blue!20, minimum width=2.5cm, minimum height=1cm] (cnn3) at (3,-1.5) {Max Pool};
-		\node[draw, rectangle, fill=blue!30, minimum width=2cm, minimum height=1cm] (cnn4) at (6,0) {Dense Layer};
+\textbf{Key Results:}
+\begin{itemize}
+	item \textbf{CNN (MCNN15):} 93.63\% test accuracy, 95.47\% training accuracy
+	item \textbf{Random Forest:} 87.52\% test accuracy, 100\% training accuracy (overfitting)
+	item \textbf{Training Time:} 900s (CNN) vs 9.45s (RF)
+	item \textbf{Challenge Category:} Shirt classification (57.4\% RF recall, 77.5\% CNN recall)
+\end{itemize}
 
-		% RF Pipeline
-		\node[draw, rectangle, fill=green!20, minimum width=2.5cm, minimum height=1cm] (rf1) at (3,-3.5) {Flatten};
-		\node[draw, rectangle, fill=green!30, minimum width=2.5cm, minimum height=1cm] (rf2) at (6,-3.5) {100 Trees};
-
-		% Output
-		\node[draw, rectangle, fill=red!20, minimum width=2cm, minimum height=1cm] (output) at (9,0) {10 Classes};
-
-		% Arrows
-		\draw[->] (input) -- (cnn1);
-		\draw[->] (cnn1) -- (cnn2);
-		\draw[->] (cnn2) -- (cnn3);
-		\draw[->] (cnn3) -- (cnn4);
-		\draw[->] (cnn4) -- (output);
-		\draw[->] (input) -- (rf1);
-		\draw[->] (rf1) -- (rf2);
-		\draw[->] (rf2) -- (output);
-
-		% Results box
-		\node[draw, rectangle, fill=yellow!20, minimum width=8cm, minimum height=1.5cm, align=center] (results) at (4.5,-5.5) {
-			\textbf{Results:} CNN 93.63\% accuracy $|$ RF 87.52\% accuracy\\
-			Training: 900s (CNN) $|$ 9.45s (RF) $|$ Challenge: Shirt (57.4\% RF, 77.5\% CNN recall)
-		};
-	\end{tikzpicture}
-	\caption{Graphical abstract showing the classification pipeline and key results}
-\end{figure}
+\textbf{Recommendation:} CNN recommended for production despite longer training time due to superior accuracy and better generalization.
 
 \section{Introduction}
 
@@ -243,31 +217,9 @@ Figures \ref{fig:cm_rf} and \ref{fig:cm_cnn} present confusion matrices for both
 
 \begin{figure}[H]
 	\centering
-	\begin{subfigure}{0.48\textwidth}
-		\centering
-		\fbox{\parbox{0.9\textwidth}{\centering
-				\textbf{Random Forest - Train Set}\\[0.3cm]
-				Perfect diagonal classification\\
-				(100\% accuracy)\\[0.3cm]
-				No misclassifications observed
-			}}
-		\caption{Training set (100\% accuracy)}
-	\end{subfigure}
-	\hfill
-	\begin{subfigure}{0.48\textwidth}
-		\centering
-		\fbox{\parbox{0.9\textwidth}{\centering
-				\textbf{Random Forest - Test Set}\\[0.3cm]
-				Key confusion patterns:\\
-				$\bullet$ Shirt $\rightarrow$ T-shirt: 163 cases\\
-				$\bullet$ Pullover $\rightarrow$ Coat: 123 cases\\
-				$\bullet$ Shirt $\rightarrow$ Pullover: 121 cases\\
-				$\bullet$ T-shirt $\rightarrow$ Shirt: 78 cases
-			}}
-		\caption{Test set (87.52\% accuracy)}
-	\end{subfigure}
-	\caption{Random Forest confusion matrices showing perfect training performance but significant confusion between similar upper-body garments on test set.}
-	\label{cm_rf}
+	\includegraphics[width=0.8\textwidth]{../../plots/random_forest/confusion.png}
+	\caption{Random Forest confusion matrix on test set showing classification patterns across all 10 fashion categories.}
+	\label{fig:cm_rf}
 \end{figure}
 
 \begin{figure}[H]
