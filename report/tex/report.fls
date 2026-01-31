@@ -1,6 +1,6 @@
-PWD c:\Users\Admin\Documents\code\university\fmnist-proejct\report\tex
+PWD C:\Users\Admin\Documents\code\university\fmnist-proejct\report\tex
 INPUT C:\Users\Admin\AppData\Local\MiKTeX\miktex\data\le\xetex\xelatex.fmt
-INPUT c:\Users\Admin\Documents\code\university\fmnist-proejct\report\tex\report.tex
+INPUT report.tex
 OUTPUT report.log
 INPUT C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls

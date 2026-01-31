@@ -65,7 +65,7 @@ def plot_misclassified(
     output_path,
     n_pairs=9,
     samples_per_pair=9,
-    img_size_inches=1.5,
+    img_size_inches=1,
 ):
     """Plot and save misclassified examples grouped by error type."""
     # Find incorrect predictions
@@ -133,7 +133,7 @@ def plot_misclassified(
         label_ax.text(
             0.5,
             0.5,
-            f"True: {class_names[true_label]}\nPrediction: {class_names[pred_label]}",
+            f"True:\n{class_names[true_label]}\nPrediction:\n{class_names[pred_label]}",
             ha="center",
             va="center",
             fontsize=9,
@@ -159,7 +159,10 @@ def plot_misclassified(
                 ax.imshow(img, cmap="gray" if len(img.shape) == 2 else None)
             ax.axis("off")
 
-    plt.tight_layout()
-    plt.subplots_adjust(top=0.95)
+    # Set fixed 2-pixel margins between images
+    # wspace/hspace are in fraction of subplot size; 2px at 100 DPI = 0.02 inches
+    # With img_size_inches=1.5, spacing = 0.02/1.5 ≈ 0.013
+    spacing = 2 / (plt.gcf().dpi * img_size_inches)
+    plt.subplots_adjust(wspace=spacing, hspace=spacing, top=0.95)
     plt.savefig(output_path, bbox_inches="tight")
     plt.close()
