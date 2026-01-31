@@ -8,12 +8,12 @@
 \contentsline {subsection}{\numberline {3.1}Overall Performance}{2}{}%
 \contentsline {subsection}{\numberline {3.2}Per-Category Performance}{2}{}%
 \contentsline {subsection}{\numberline {3.3}Confusion Matrices}{3}{}%
-\contentsline {subsection}{\numberline {3.4}Category-Specific Analysis}{4}{}%
-\contentsline {section}{\numberline {4}Analysis and Discussion}{5}{}%
-\contentsline {subsection}{\numberline {4.1}Worst Performing Categories}{5}{}%
-\contentsline {subsection}{\numberline {4.2}Production Recommendation}{5}{}%
-\contentsline {section}{\numberline {5}Conclusion}{5}{}%
+\contentsline {subsection}{\numberline {3.4}Category-Specific Analysis}{3}{}%
+\contentsline {section}{\numberline {4}Analysis and Discussion}{4}{}%
+\contentsline {subsection}{\numberline {4.1}Worst Performing Categories}{4}{}%
+\contentsline {subsection}{\numberline {4.2}Production Recommendation}{4}{}%
+\contentsline {section}{\numberline {5}Conclusion}{4}{}%
 \contentsline {section}{References}{5}{}%
-\contentsline {section}{\numberline {A}Code Implementation}{7}{}%
-\contentsline {subsection}{\numberline {A.1}Random Forest Training}{7}{}%
-\contentsline {subsection}{\numberline {A.2}CNN Training (PyTorch)}{7}{}%
+\contentsline {section}{\numberline {A}Code Implementation}{6}{}%
+\contentsline {subsection}{\numberline {A.1}Random Forest Training}{6}{}%
+\contentsline {subsection}{\numberline {A.2}CNN Training (PyTorch)}{6}{}%

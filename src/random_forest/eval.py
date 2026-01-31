@@ -47,18 +47,31 @@ def get_predictions(X, y, dataset_name):
     return preds, y, X
 
 
-# Get predictions for test set
+# Get predictions for both train and test sets
+pred_train, y_train, X_train = get_predictions(X_train, y_train, "train")
 pred_test, y_test, X_test = get_predictions(X_test, y_test, "test")
 
 # %%
-print("\n[RESULTS]")
+print("\n[RESULTS - TEST SET]")
 print_classification_metrics(y_test, pred_test, CLASS_NAMES)
 
-# %% Plot confusion matrix
+print("\n[RESULTS - TRAIN SET]")
+print_classification_metrics(y_train, pred_train, CLASS_NAMES)
+
+# %% Plot confusion matrices
 plot_confusion_matrix(
-    y_test, pred_test, CLASS_NAMES, PROJECT_DIR / "plots/random_forest/confusion.png"
+    y_train,
+    pred_train,
+    CLASS_NAMES,
+    PROJECT_DIR / "plots/random_forest/confusion_train.png",
 )
-print(f"[{time.time() - total_start:.2f}s] Confusion matrix saved")
+plot_confusion_matrix(
+    y_test,
+    pred_test,
+    CLASS_NAMES,
+    PROJECT_DIR / "plots/random_forest/confusion_test.png",
+)
+print(f"[{time.time() - total_start:.2f}s] Confusion matrices saved")
 
 # %% Visualize misclassified examples
 print("\n[MISCLASSIFIED EXAMPLES]")

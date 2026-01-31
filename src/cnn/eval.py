@@ -66,15 +66,21 @@ def get_predictions(train: bool):
     )
 
 
-# pred_train, y_train, x_train = get_predictions(train=True)
+pred_train, y_train, x_train = get_predictions(train=True)
 pred_test, y_test, x_test = get_predictions(train=False)
 
-print("\n[RESULTS]")
+print("\n[RESULTS - TEST SET]")
 print_classification_metrics(y_test, pred_test, CLASS_NAMES)
 
-# %% Plot confusion matrix
+print("\n[RESULTS - TRAIN SET]")
+print_classification_metrics(y_train, pred_train, CLASS_NAMES)
+
+# %% Plot confusion matrices
 plot_confusion_matrix(
-    y_test, pred_test, CLASS_NAMES, PROJECT_DIR / "plots/cnn/confusion.png"
+    y_train, pred_train, CLASS_NAMES, PROJECT_DIR / "plots/cnn/confusion_train.png"
+)
+plot_confusion_matrix(
+    y_test, pred_test, CLASS_NAMES, PROJECT_DIR / "plots/cnn/confusion_test.png"
 )
 # %% Visualize misclassified examples
 print("\n[MISCLASSIFIED EXAMPLES]")

@@ -4,17 +4,18 @@ FASHION-MNIST RANDOM FOREST EVALUATION
 
 [MODEL LOADING]
 Model loaded from C:\Users\Admin\Documents\code\university\fmnist-proejct\src\random_forest\random_forest_model.pkl
-[0.12s] Model loaded from C:\Users\Admin\Documents\code\university\fmnist-proejct\src\random_forest\random_forest_model.pkl
+[0.09s] Model loaded from C:\Users\Admin\Documents\code\university\fmnist-proejct\src\random_forest\random_forest_model.pkl
 
 [DATA LOADING]
 Loading train dataset...
 Loading test dataset...
-[7.89s] Data loaded: 60000 train, 10000 test samples
+[3.58s] Data loaded: 60000 train, 10000 test samples
 
 [PREDICTION]
-[7.99s] Generated predictions for test set in 0.10s
+[4.00s] Generated predictions for train set in 0.42s
+[4.07s] Generated predictions for test set in 0.07s
 
-[RESULTS]
+[RESULTS - TEST SET]
 ============================================================
 Test accuracy:   0.8752
 Test precision:  0.8742
@@ -50,7 +51,44 @@ Recall:		0.9730
 Label: Ankle boot
 Precision:	0.9517
 Recall:		0.9450
-[8.58s] Confusion matrix saved
+
+[RESULTS - TRAIN SET]
+============================================================
+Test accuracy:   1.0000
+Test precision:  1.0000
+Test recall:     1.0000
+============================================================
+Label: T-shirt/top
+Precision:	1.0000
+Recall:		1.0000
+Label: Trouser
+Precision:	1.0000
+Recall:		1.0000
+Label: Pullover
+Precision:	1.0000
+Recall:		1.0000
+Label: Dress
+Precision:	1.0000
+Recall:		1.0000
+Label: Coat
+Precision:	1.0000
+Recall:		1.0000
+Label: Sandal
+Precision:	1.0000
+Recall:		1.0000
+Label: Shirt
+Precision:	1.0000
+Recall:		1.0000
+Label: Sneaker
+Precision:	1.0000
+Recall:		1.0000
+Label: Bag
+Precision:	1.0000
+Recall:		1.0000
+Label: Ankle boot
+Precision:	1.0000
+Recall:		1.0000
+[4.61s] Confusion matrices saved
 
 [MISCLASSIFIED EXAMPLES]
 Top 9 misclassification pairs:
@@ -64,6 +102,6 @@ Top 9 misclassification pairs:
   Coat -> Shirt: 49 examples
   Ankle boot -> Sneaker: 44 examples
 Sampling 816 examples from 1248 total. 65.38% of total
-[10.06s] Misclassified examples saved
+[5.34s] Misclassified examples saved
 
-[10.06s] Evaluation complete
+[5.34s] Evaluation complete

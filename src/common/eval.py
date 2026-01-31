@@ -37,7 +37,7 @@ def print_classification_metrics(y_true, y_pred, class_names):
 def plot_confusion_matrix(y_true, y_pred, class_names, output_path):
     """Plot and save confusion matrix heatmap."""
     confusion = sklearn.metrics.confusion_matrix(y_true, y_pred)
-    norm_confusion = confusion / confusion.sum(axis=1, keepdims=True) * 100
+    norm_confusion = np.round(confusion / confusion.sum(axis=1, keepdims=True), 2)
     log_confusion = np.log1p(confusion)
 
     sns.heatmap(
