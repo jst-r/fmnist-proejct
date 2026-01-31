@@ -10,6 +10,7 @@ from src.common.eval import (
     plot_misclassified,
 )
 from src.common.paths import PROJECT_DIR
+from src.common.shared import CLASS_NAMES
 
 
 print("=" * 60)
@@ -18,19 +19,6 @@ print("=" * 60)
 
 total_start = time.time()
 
-# %%
-class_names = [
-    "T-shirt/top",
-    "Trouser",
-    "Pullover",
-    "Dress",
-    "Coat",
-    "Sandal",
-    "Shirt",
-    "Sneaker",
-    "Bag",
-    "Ankle boot",
-]
 
 print("\n[MODEL LOADING]")
 load_start = time.time()
@@ -82,11 +70,11 @@ def get_predictions(train: bool):
 pred_test, y_test, x_test = get_predictions(train=False)
 
 print("\n[RESULTS]")
-print_classification_metrics(y_test, pred_test, class_names)
+print_classification_metrics(y_test, pred_test, CLASS_NAMES)
 
 # %% Plot confusion matrix
 plot_confusion_matrix(
-    y_test, pred_test, class_names, PROJECT_DIR / "plots/cnn/confusion.png"
+    y_test, pred_test, CLASS_NAMES, PROJECT_DIR / "plots/cnn/confusion.png"
 )
 # %% Visualize misclassified examples
 print("\n[MISCLASSIFIED EXAMPLES]")
@@ -94,7 +82,7 @@ plot_misclassified(
     x_test,
     y_test,
     pred_test,
-    class_names,
+    CLASS_NAMES,
     PROJECT_DIR / "plots/cnn/misclassified.png",
 )
 

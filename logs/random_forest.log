@@ -1,54 +1,69 @@
 ============================================================
-FASHION-MNIST RANDOM FOREST CLASSIFIER
+FASHION-MNIST RANDOM FOREST EVALUATION
 ============================================================
+
+[MODEL LOADING]
+Model loaded from C:\Users\Admin\Documents\code\university\fmnist-proejct\src\random_forest\random_forest_model.pkl
+[0.12s] Model loaded from C:\Users\Admin\Documents\code\university\fmnist-proejct\src\random_forest\random_forest_model.pkl
 
 [DATA LOADING]
 Loading train dataset...
 Loading test dataset...
-Data loading complete: 60000 train, 10000 test samples
+[9.32s] Data loaded: 60000 train, 10000 test samples
 
-[MODEL TRAINING]
-Random Forest initialized: n_estimators=100, max_depth=100, criterion=entropy
-Training completed in 9.45 seconds
+[PREDICTION]
+[9.45s] Generated predictions for test set in 0.12s
 
-[MODEL EVALUATION]
-Evaluation completed in 0.51 seconds
-
+[RESULTS]
 ============================================================
-RESULTS
-============================================================
-Train accuracy:  1.0000
-Test accuracy:   0.8755
-Test precision:  0.8746
-Test recall:     0.8755
+Test accuracy:   0.8754
+Test precision:  0.8742
+Test recall:     0.8754
 ============================================================
 Label: T-shirt/top
-Precision:	0.8132
-Recall:		0.8620
+Precision:	0.8112
+Recall:		0.8550
 Label: Trouser
-Precision:	0.9948
-Recall:		0.9590
+Precision:	0.9918
+Recall:		0.9660
 Label: Pullover
-Precision:	0.7636
-Recall:		0.7980
+Precision:	0.7589
+Recall:		0.7930
 Label: Dress
-Precision:	0.8773
+Precision:	0.8790
 Recall:		0.9080
 Label: Coat
-Precision:	0.7622
-Recall:		0.8140
+Precision:	0.7713
+Recall:		0.8130
 Label: Sandal
-Precision:	0.9815
+Precision:	0.9775
 Recall:		0.9550
 Label: Shirt
-Precision:	0.7264
-Recall:		0.5840
+Precision:	0.7181
+Recall:		0.5860
 Label: Sneaker
-Precision:	0.9243
-Recall:		0.9530
+Precision:	0.9280
+Recall:		0.9540
 Label: Bag
-Precision:	0.9539
-Recall:		0.9720
+Precision:	0.9540
+Recall:		0.9750
 Label: Ankle boot
-Precision:	0.9491
-Recall:		0.9500
+Precision:	0.9519
+Recall:		0.9490
+[10.10s] Confusion matrix saved
+
+[MISCLASSIFIED EXAMPLES]
+Top 9 misclassification pairs:
+  Shirt -> T-shirt/top: 162 examples
+  Shirt -> Pullover: 127 examples
+  Pullover -> Coat: 117 examples
+  Coat -> Pullover: 100 examples
+  T-shirt/top -> Shirt: 84 examples
+  Shirt -> Coat: 80 examples
+  Pullover -> Shirt: 63 examples
+  Coat -> Shirt: 47 examples
+  Ankle boot -> Sneaker: 40 examples
+Sampling 820 examples from 1246 total. 65.81% of total
+[11.92s] Misclassified examples saved
+
+[11.92s] Evaluation complete
