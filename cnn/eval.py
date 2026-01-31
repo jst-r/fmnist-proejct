@@ -6,7 +6,7 @@ from matplotlib import pyplot as plt
 import sklearn.metrics
 import torch
 
-from shared import get_loaders, make_model, device
+from shared import PROJECT_DIR, get_loaders, make_model, device
 
 
 print("=" * 60)
@@ -123,15 +123,15 @@ sns.heatmap(
 plt.xticks(rotation=45, ha="right")
 plt.xlabel("Predicted Label")
 plt.ylabel("True Label")
-plt.show()
-
+plt.tight_layout()
+plt.savefig(PROJECT_DIR / "plots/cnn/confusion.png", bbox_inches="tight")
 # %% Visualize misclassified examples
 print("\n[MISCLASSIFIED EXAMPLES]")
 
 # Configuration
 N_PAIRS = 9  # Number of top misclassification pairs to display
 SAMPLES_PER_PAIR = 9  # Number of random samples per pair
-IMG_SIZE_INCHES = 2  # Size of each 28x28 image in inches
+IMG_SIZE_INCHES = 1.5  # Size of each 28x28 image in inches
 
 # Find incorrect predictions
 incorrect_mask = pred_test != y_test
@@ -160,7 +160,7 @@ top_n_pairs = sorted(pair_counts.items(), key=lambda x: x[1], reverse=True)[:N_P
 print(f"Top {N_PAIRS} misclassification pairs:")
 for (true_label, pred_label), count in top_n_pairs:
     shown_incorrect += count
-    print(f"  {class_names[true_label]} → {class_names[pred_label]}: {count} examples")
+    print(f"  {class_names[true_label]} -> {class_names[pred_label]}: {count} examples")
 
 print(
     f"Sampling {shown_incorrect} examples from {total_incorrect} total. {shown_incorrect / total_incorrect:.2%} of total"
@@ -216,7 +216,8 @@ for row, ((true_label, pred_label), count) in enumerate(top_n_pairs):
 
 plt.tight_layout()
 plt.subplots_adjust(top=0.95)
-plt.show()
+
+plt.savefig(PROJECT_DIR / "plots/cnn/misclassified.png", bbox_inches="tight")
 
 print(f"\n[{time.time() - total_start:.2f}s] Evaluation complete")
 # %%

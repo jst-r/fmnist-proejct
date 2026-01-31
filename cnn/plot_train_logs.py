@@ -12,5 +12,5 @@ plt.plot(df["epoch"], df["val_acc"], label="validation")
 plt.plot(df["epoch"], df["test_acc"], label="test")
 plt.legend()
 plt.grid()
-plt.savefig(PROJECT_DIR / "plots/cnn/training.png")
+plt.savefig(PROJECT_DIR / "plots/cnn/training.png", bbox_inches="tight")
 # %%
