@@ -1,17 +1,17 @@
 # Fdb version 4
-["biber report"] 1769900373.62194 "report.bcf" "report.bbl" "report" 1769900382.05169 0
+["biber report"] 1769900373.62194 "report.bcf" "report.bbl" "report" 1770016524.53502 0
   "references.bib" 1769900349 5332 864edf2a59e9305bb5b76ca322165c61 ""
-  "report.bcf" 1769900380 136000 0e00dd3a9ac731ff5c0873ab1ffafd62 "xelatex"
+  "report.bcf" 1770016522 136000 0e00dd3a9ac731ff5c0873ab1ffafd62 "xelatex"
   (generated)
   "report.bbl"
   "report.blg"
   (rewritten before read)
-["xdvipdfmx"] 1769900380.69428 "report.xdv" "report.pdf" "report" 1769900382.05643 0
-  "report.xdv" 1769900380 296700 7d1e26169c7bd0df48766093cb4f67db "xelatex"
+["xdvipdfmx"] 1770016523.15508 "report.xdv" "report.pdf" "report" 1770016524.54398 0
+  "report.xdv" 1770016522 279776 a0c43121b1c24c5e4f37b65ba7e8286a "xelatex"
   (generated)
   "report.pdf"
   (rewritten before read)
-["xelatex"] 1769900378.13819 "report.tex" "report.xdv" "report" 1769900382.05185 0
+["xelatex"] 1770016520.80024 "c:/Users/Admin/Documents/code/university/fmnist-proejct/report/tex/report.tex" "report.xdv" "report" 1770016524.53519 0
   "../../plots/cnn/confusion_test.png" 1769897767 48396 3d4bdc779a5518f65ddc3f84ecb97083 ""
   "../../plots/cnn/confusion_train.png" 1769897797 51372 567ee160a85e679d8ca62e4dc6594aba ""
   "../../plots/cnn/misclassified.png" 1769897768 344564 edec3e978cd5e8dbca78c9a43ac67c74 ""
@@ -174,16 +174,15 @@
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/tex/latex/tools/array.sty" 1761901070 15651 9d7c62df82cb29a555c00550babfe364 ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
-  "report.aux" 1769900380 12062 72edf75d475333bb2937bea6f01ade17 "xelatex"
-  "report.bbl" 1769900375 46157 75831dbe10d8298dda36c0fce43c740a "biber report"
-  "report.lof" 1769900380 1544 c846ca063a7cb70219b0acf4426de0ea "xelatex"
-  "report.run.xml" 1769900380 2476 cf4e0f7ca5100b3b28735de53a5a3a45 "xelatex"
-  "report.tex" 1769899927 30703 19735714bbb9b26e8a70af46f21a3019 ""
-  "report.toc" 1769900380 2458 d91abe994e16ba81b248884bfa90ed5e "xelatex"
+  "c:/Users/Admin/Documents/code/university/fmnist-proejct/report/tex/report.tex" 1770016520 30625 38344916ff28c8dec4591717cba52dde ""
+  "report.aux" 1770016522 11973 09571aad780a969b10ab0f4c34f94444 "xelatex"
+  "report.bbl" 1770015874 46157 75831dbe10d8298dda36c0fce43c740a "biber report"
+  "report.run.xml" 1770016522 2476 cf4e0f7ca5100b3b28735de53a5a3a45 "xelatex"
+  "report.tex" 1770016520 30625 38344916ff28c8dec4591717cba52dde ""
+  "report.toc" 1770016522 2410 e2600e1e8ad63b8d3b445a151e1b1c8d "xelatex"
   (generated)
   "report.aux"
   "report.bcf"
-  "report.lof"
   "report.log"
   "report.run.xml"
   "report.toc"

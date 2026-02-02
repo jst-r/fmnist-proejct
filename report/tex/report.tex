@@ -58,14 +58,14 @@
 % ============================================
 % DOCUMENT INFORMATION
 % ============================================
-\newcommand{\thesistitle}{Comparative Analysis of CNN and Random Forest for Fashion-MNIST Classification}
-\newcommand{\thesistype}{Research Report}
-\newcommand{\coursename}{Machine Learning}
-\newcommand{\courseofstudy}{Computer Science}
+\newcommand{\thesistitle}{Classifying Fashion Products}
+\newcommand{\thesistype}{Project Report}
+\newcommand{\coursename}{DLBAIPCV01 - Project: Computer Vision}
+\newcommand{\courseofstudy}{EU ODSP BAAI - Applied Artificial Intelligence}
 \newcommand{\thesisdate}{January 2026}
-\newcommand{\authorname}{Student Name}
-\newcommand{\matriculationnumber}{123456789}
-\newcommand{\tutorname}{Tutor Name}
+\newcommand{\authorname}{Dmitrii Lavrov}
+\newcommand{\matriculationnumber}{42307367}
+\newcommand{\tutorname}{Gissel Velarde}
 
 \begin{document}
 
@@ -76,12 +76,11 @@
 	\centering
 	\vspace*{2cm}
 	{\fontsize{12}{14}\selectfont\bfseries\thesistitle}
-	\vspace{2cm}
-	{\fontsize{11}{13}\selectfont\thesistype}
-	\vspace{2cm}
+	\\[0.5cm]
 	{\fontsize{11}{13}\selectfont
-		Course: \coursename\\[0.5cm]
-		Course of Study: \courseofstudy
+	\thesistype\\[0.5cm]
+	Course: \coursename\\[0.5cm]
+	Course of Study: \courseofstudy
 	}
 	\vfill
 	{\fontsize{11}{13}\selectfont
@@ -126,24 +125,24 @@ This study compares Convolutional Neural Network (CNN) and Random Forest classif
 		% Dataset
 		\node[dataset] (data) at (0,0) {\textbf{Fashion-MNIST}\linebreak 70K images\linebreak 10 classes};
 
-		% Models with more spacing from dataset
+		% Models
 		\node[cnn] (cnn) at (5,1.2) {\textbf{CNN}\linebreak MCNN15\linebreak 15 layers};
 		\node[rf] (rf) at (5,-1.2) {\textbf{Random Forest}\linebreak 100 trees\linebreak max\_depth=100};
 
-		% Results with more spacing
-		\node[result] (acc) at (9.5,1.2) {\textbf{Accuracy}\linebreak 93.63\% (CNN)\linebreak 87.52\% (RF)};
-		\node[result] (time) at (9.5,-1.2) {\textbf{Training Time}\linebreak 900s (CNN)\linebreak 9.45s (RF)};
+		% Results - one node per classifier
+		\node[result] (cnn_result) at (9.5,1.2) {\textbf{CNN Results}\linebreak 93.63\% accuracy\linebreak 900s\linebreak training time};
+		\node[result] (rf_result) at (9.5,-1.2) {\textbf{RF Results}\linebreak 87.52\% accuracy\linebreak 9.45s\linebreak training time};
 
 		% Conclusion
 		\node[rec] (rec) at (13.5,0) {\textbf{Recommendation}\linebreak CNN for Production};
 
-		% Arrows with better spacing
+		% Arrows
 		\draw[arrow] (data.east) -- ++(0.8,0) |- (cnn.west);
 		\draw[arrow] (data.east) -- ++(0.8,0) |- (rf.west);
-		\draw[arrow] (cnn.east) -- ++(0.6,0) |- (acc.west);
-		\draw[arrow] (rf.east) -- ++(0.6,0) |- (time.west);
-		\draw[arrow] (acc.east) -- ++(0.5,0) |- (rec.west);
-		\draw[arrow] (time.east) -- ++(0.5,0) |- (rec.west);
+		\draw[arrow] (cnn.east) -- ++(0.8,0) |- (cnn_result.west);
+		\draw[arrow] (rf.east) -- ++(0.8,0) |- (rf_result.west);
+		\draw[arrow] (cnn_result.east) -- ++(0.5,0) |- (rec.west);
+		\draw[arrow] (rf_result.east) -- ++(0.5,0) |- (rec.west);
 
 	\end{tikzpicture}
 	\caption{Graphical Abstract: Comparative analysis workflow from Fashion-MNIST dataset through CNN and Random Forest classifiers to performance metrics and production recommendation.}
@@ -467,11 +466,11 @@ This study demonstrates clear advantages for CNN-based approaches in fashion ima
 
 \section{Hardware Configuration}
 
-All training experiments were conducted on a workstation with an Intel Core i7-14700 processor, NVIDIA GeForce RTX 4080 SUPER GPU (16GB VRAM), and 32GB system RAM. Random Forest training utilized CPU parallelization across all available cores. CNN training was performed entirely on GPU. Inference benchmarks were additionally evaluated on a laptop with Intel Core i5-13429H and NVIDIA GeForce RTX 4060 GPU to assess deployment feasibility across hardware tiers.
+All training experiments were conducted on a workstation with an Intel Core i7-14700 processor, NVIDIA GeForce RTX 4080 SUPER GPU (16GB VRAM), and 32GB system RAM. Random Forest training utilized CPU parallelization across all available cores. CNN training was performed entirely on GPU. Inference benchmarks were additionally evaluated on a laptop with Intel Core i5-13420H and NVIDIA GeForce RTX 4060 GPU to assess deployment feasibility across hardware tiers.
 
 \section{Code Implementation}
 
-\noindent\textit{Note: The complete implementation including all source code, training scripts, evaluation code, and generated plots is available in a GitHub repository located at \url{https://github.com/jst-r/fmnist-proejct}.}
+\noindent\textit{Note: The complete implementation including all source code, training scripts, evaluation code, and generated plots is available in a GitHub repository located at \url{https://github.com/jst-r/fmnist-proejct} and in the attached archive.}
 
 \subsection{Random Forest Training}
 
@@ -526,11 +525,5 @@ class MCNN15(nn.Module):
             nn.ReLU()
         )
 \end{lstlisting}
-
-\newpage
-\section*{List of Figures}
-\addcontentsline{toc}{section}{List of Figures}
-
-\listoffigures
 
 \end{document}
